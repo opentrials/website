@@ -141,6 +141,9 @@ input[type="submit"] {
    ========================================================================== */
 
 .logo {
+  background-repeat:no-repeat;
+}
+.opentrials.logo {
   max-width:100%;
   height:60px;
   width:225px;
@@ -158,9 +161,48 @@ input[type="submit"] {
   }
 }
 
+.logos {
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  @media only screen and (min-width: 700px) {
+    position: fixed;
+    bottom:15px;
+    right:25px;
+  }
+}
+.ok.logo {
+  height:40px;
+  width:35px;
+  background-image:url(../img/ok.png);
+  background-size: auto 80px;
+  display:inline-block;
+}
+.cos.logo {
+  height:40px;
+  width:67px;
+  background-image:url(../img/cos.png);
+  background-size: auto 80px;
+  display:inline-block;
+  margin-left:20px;
+}
+.ljaf.logo {
+  height:40px;
+  width:104px;
+  background-image:url(../img/ljaf.png);
+  background-size: auto 80px;
+  display:inline-block;
+  margin-left:15px;
+}
+
 .fp-viewing-register {
   .logo {
     background-position:left -60px;
+  }
+  .ok.logo,
+  .cos.logo,
+  .ljaf.logo {
+    background-position:left -40px;
   }
 }
 
@@ -181,9 +223,23 @@ input[type="submit"] {
     color:$colour;
   }
   
-  a.register {
+  a.register,
+  a.follow {
     @include btn($background-colour, $colour);
     margin-top:10px;
+  }
+  
+  a.register {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  @media only screen and (min-width: 700px) {
+    a.follow {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left:none;
+    }
   }
   
   @media only screen and (max-width: 700px) {
