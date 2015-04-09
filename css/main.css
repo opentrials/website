@@ -737,19 +737,15 @@ input[type="submit"] {
     color: #fff;
     border: solid 5px #fff;
     background-color: #12b2e3;
-    margin-top: 10px; }
+    margin-top: 10px;
+    background-color: #fff;
+    color: #12b2e3; }
     .intro a.register:hover,
     .intro a.follow:hover {
       background-color: #fff;
       color: #12b2e3; }
   .intro a.register {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0; }
-  @media only screen and (min-width: 700px) {
-    .intro a.follow {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left: none; } }
+    margin-right: 10px; }
   @media only screen and (max-width: 700px) {
     .intro {
       padding: 20px; } }
