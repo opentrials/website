@@ -103,7 +103,8 @@ legend {
   font-weight:bold;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   display:block;
   width:100%;
   box-sizing:border-box;
@@ -299,14 +300,6 @@ input[type="submit"] {
     }
   }
 }
-
-
-
-
-
-
-
-
 
 
 

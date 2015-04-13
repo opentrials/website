@@ -613,7 +613,8 @@ textarea {
 legend {
   font-weight: bold; }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -622,7 +623,8 @@ input[type="text"] {
   border: solid 2px #ccc;
   padding: 10px 20px;
   margin-bottom: 20px; }
-  input[type="text"]:focus {
+  input[type="text"]:focus,
+  input[type="email"]:focus {
     border-color: #12b2e3; }
 
 input[type="submit"] {
