@@ -152,8 +152,12 @@ input[type="submit"] {
   z-index:1;
   left:25px;
   top:25px;
-  background-image:url(../img/logo.png);
-  background-size: 225px 120px;
+  background-image:url(../img/logo-small.png);
+  
+  .backgroundsize & {
+    background-image:url(../img/logo.png);
+    background-size: 225px 120px;
+  }
   
   @media only screen and (min-width: 700px) {
     position: fixed;
@@ -175,25 +179,37 @@ input[type="submit"] {
 .ok.logo {
   height:40px;
   width:182px;
-  background-image:url(../img/ok.png);
-  background-size: auto 80px;
+  background-image:url(../img/ok-small.png);
   display:inline-block;
+  
+  .backgroundsize & {
+    background-image:url(../img/ok.png);
+    background-size: auto 80px;
+  }
 }
 .cos.logo {
   height:40px;
   width:67px;
-  background-image:url(../img/cos.png);
-  background-size: auto 80px;
+  background-image:url(../img/cos-small.png);
   display:inline-block;
   margin-left:20px;
+  
+  .backgroundsize & {
+    background-image:url(../img/cos.png);
+    background-size: auto 80px;
+  }
 }
 .ljaf.logo {
   height:40px;
   width:104px;
-  background-image:url(../img/ljaf.png);
-  background-size: auto 80px;
+  background-image:url(../img/ljaf-small.png);
   display:inline-block;
   margin-left:15px;
+  
+  .backgroundsize & {
+    background-image:url(../img/ljaf.png);
+    background-size: auto 80px;
+  }
 }
 
 .fp-viewing-register {
