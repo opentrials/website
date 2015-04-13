@@ -173,12 +173,11 @@ input[type="submit"] {
   }
 }
 .ok.logo {
-  height:60px;
-  width:52px;
+  height:40px;
+  width:182px;
   background-image:url(../img/ok.png);
-  background-size: auto 120px;
+  background-size: auto 80px;
   display:inline-block;
-  margin-bottom:-9px;
 }
 .cos.logo {
   height:40px;
@@ -201,6 +200,7 @@ input[type="submit"] {
   .logo {
     background-position:left -60px;
   }
+  .ok.logo,
   .cos.logo,
   .ljaf.logo {
     background-position:left -40px;

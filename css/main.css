@@ -686,12 +686,11 @@ input[type="submit"] {
       right: 25px; } }
 
 .ok.logo {
-  height: 60px;
-  width: 52px;
+  height: 40px;
+  width: 182px;
   background-image: url(../img/ok.png);
-  background-size: auto 120px;
-  display: inline-block;
-  margin-bottom: -9px; }
+  background-size: auto 80px;
+  display: inline-block; }
 
 .cos.logo {
   height: 40px;
@@ -711,6 +710,7 @@ input[type="submit"] {
 
 .fp-viewing-register .logo {
   background-position: left -60px; }
+.fp-viewing-register .ok.logo,
 .fp-viewing-register .cos.logo,
 .fp-viewing-register .ljaf.logo {
   background-position: left -40px; }
