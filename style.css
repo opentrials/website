@@ -1,3 +1,21 @@
+/*
+Theme Name: Open Trials
+Theme URI: http://opentrials.net/
+Author: Sam Smith, for Open Knowledge
+Author URI: http://okfn.org/
+Description: Theme for Open Trials
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: open-trials
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Open Trials is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -667,9 +685,9 @@ input[type="submit"] {
   z-index: 1;
   left: 25px;
   top: 25px;
-  background-image: url(../img/logo-small.png); }
+  background-image: url(img/logo-small.png); }
   .backgroundsize .opentrials.logo {
-    background-image: url(../img/logo.png);
+    background-image: url(img/logo.png);
     background-size: 225px 120px; }
   @media only screen and (min-width: 700px) {
     .opentrials.logo {
@@ -690,30 +708,30 @@ input[type="submit"] {
 .ok.logo {
   height: 40px;
   width: 182px;
-  background-image: url(../img/ok-small.png);
+  background-image: url(img/ok-small.png);
   display: inline-block; }
   .backgroundsize .ok.logo {
-    background-image: url(../img/ok.png);
+    background-image: url(img/ok.png);
     background-size: auto 80px; }
 
 .cos.logo {
   height: 40px;
   width: 67px;
-  background-image: url(../img/cos-small.png);
+  background-image: url(img/cos-small.png);
   display: inline-block;
   margin-left: 20px; }
   .backgroundsize .cos.logo {
-    background-image: url(../img/cos.png);
+    background-image: url(img/cos.png);
     background-size: auto 80px; }
 
 .ljaf.logo {
   height: 40px;
   width: 104px;
-  background-image: url(../img/ljaf-small.png);
+  background-image: url(img/ljaf-small.png);
   display: inline-block;
   margin-left: 15px; }
   .backgroundsize .ljaf.logo {
-    background-image: url(../img/ljaf.png);
+    background-image: url(img/ljaf.png);
     background-size: auto 80px; }
 
 .fp-viewing-register .logo {
@@ -729,7 +747,7 @@ input[type="submit"] {
   text-align: center;
   color: #fff;
   background-color: #12b2e3;
-  background-image: url(../img/bg.jpg);
+  background-image: url(img/bg.jpg);
   background-repeat: no-repeat;
   background-position: right top; }
   .intro a {
@@ -929,4 +947,4 @@ input[type="submit"] {
   h3 {
     page-break-after: avoid; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */
