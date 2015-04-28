@@ -103,6 +103,7 @@ function open_trials_scripts() {
 	wp_enqueue_style( 'open-trials-style', get_stylesheet_uri() );
 
 	if ( is_page_template( 'page-holding.php' ) ) {
+    wp_enqueue_style( 'fullpage', get_template_directory_uri() . '/css/fullPage.css');
     wp_enqueue_script( 'open-trials-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
 	  wp_enqueue_script( 'open-trials-main', get_template_directory_uri() . '/js/main.js', array(), '20130115', true );
   }
