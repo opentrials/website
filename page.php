@@ -25,30 +25,49 @@ get_header(); ?>
     </div>
     <div class="register section">
       <!-- Begin MailChimp Signup Form -->
-      <div id="mc_embed_signup">
-      <form action="//okfn.us10.list-manage.com/subscribe/post?u=e39c0e42eb3478fb22b423e4e&amp;id=34516c152f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-        <h2>Register for updates</h2>
-      <div class="mc-field-group">
-        <label for="mce-EMAIL">Email Address </label>
-        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-      </div>
-      <div class="mc-field-group">
-        <label for="mce-FNAME">First Name </label>
-        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-      </div>
-      <div class="mc-field-group">
-        <label for="mce-LNAME">Last Name </label>
-        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-      </div>
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_e39c0e42eb3478fb22b423e4e_34516c152f" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </div>
-      </form>
+      <form action="http://okfn.us10.list-manage1.com/subscribe/post" method="POST">
+        <input type="hidden" name="u" value="e39c0e42eb3478fb22b423e4e">
+        <input type="hidden" name="id" value="34516c152f">
+        <div id="mergeTable" class="mergeTable">
+        <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+        <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+        <div class="field-group">
+            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+        </div>
+        </div>
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
+        <label for="MERGE1">First Name</label>
+        <div class="field-group">
+            <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+        </div>
+        </div>
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
+        <label for="MERGE2">Last Name</label>
+        <div class="field-group">
+            <input type="text" name="MERGE2" id="MERGE2" size="25" value="">
+        </div>
+        </div>
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-3">
+        <label for="MERGE3">Organisation</label>
+        <div class="field-group">
+            <input type="text" name="MERGE3" id="MERGE3" size="25" value="">
+        </div>
+        </div>
+        <!--
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-4">
+        <label for="MERGE4">Twitter Username</label>
+        <div class="field-group">
+            <input type="text" name="MERGE4" id="MERGE4" size="25" value="">
+        </div>
+        </div>
+        -->
+        </div>
+        <!-- real people should not fill this in and expect good things -->
+        <div class="hidden-from-view"><input type="text" name="b_e39c0e42eb3478fb22b423e4e_34516c152f" tabindex="-1" value=""></div>
+        <div class="submit_container clear">
+        <input type="submit" class="button" name="submit" value="Register">
+        </div>
+        </form>
       </div>
       <!--End mc_embed_signup-->
     </div>

@@ -317,7 +317,10 @@ input[type="submit"] {
   }
 }
 
-
+.hidden-from-view {
+  left: -5000px;
+  position: absolute;
+}
 
 /* ==========================================================================
    Helper classes
