@@ -324,6 +324,54 @@ input[type="submit"] {
 }
 
 /* ==========================================================================
+   Content Page
+   ========================================================================== */
+   
+.page-template-default {
+  
+  & > header {
+    max-width:940px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+    
+    a {
+      img {
+        height:73px;
+      }
+    }
+  }
+  
+  article.page {
+    .entry-header {
+      background-color:$blue;
+      background-image:url(img/bg.jpg);
+      background-repeat:no-repeat;
+      background-position:right top;
+      color:#fff;
+      margin-bottom:30px;
+      
+      .entry-title {
+        max-width:940px;
+        margin:0 auto;
+        padding:30px 20px;
+        font-size:62px;
+      }
+    }
+    
+    .entry-content,
+    .entry-footer {
+      max-width:940px;
+      margin-left:auto;
+      margin-right:auto;
+      padding-left:20px;
+      padding-right:20px;
+    }
+  }
+}
+
+   
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
