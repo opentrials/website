@@ -573,7 +573,8 @@ html {
   color: #333;
   font-size: 1em;
   line-height: 1.4;
-  font-weight: 200; }
+  font-weight: 200;
+  font-family: Helvetica, Arial, sans-serif; }
 
 /*
  * Remove text-shadow in selection highlight:
