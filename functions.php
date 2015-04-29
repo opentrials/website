@@ -101,6 +101,7 @@ add_action( 'widgets_init', 'open_trials_widgets_init' );
  */
 function open_trials_scripts() {
 	wp_enqueue_style( 'open-trials-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'open-trials-nav', get_template_directory_uri() . '/js/navigation.js', array(), '20130115', true );
 
 	if ( is_page_template( 'page-holding.php' ) ) {
     wp_enqueue_style( 'fullpage', get_template_directory_uri() . '/css/fullPage.css');

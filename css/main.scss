@@ -1,6 +1,9 @@
-@import "normalize";
-
 $blue: #12b2e3;
+$grey: #3B3B3A;
+$grey-light: #F5F5F5;
+
+@import "normalize";
+@import "menus";
 
 
 @mixin btn($background:#fff, $colour:$blue) {
@@ -28,7 +31,7 @@ $blue: #12b2e3;
    ========================================================================== */
 
 html {
-    color: #333;
+    color: $grey;
     font-size: 1em;
     line-height: 1.4;
     font-weight:200;
@@ -136,7 +139,7 @@ input[type="submit"] {
     padding: 0.2em 0;
 }
 
-
+   
 /* ==========================================================================
    Holding Page
    ========================================================================== */
@@ -209,6 +212,29 @@ input[type="submit"] {
   .backgroundsize & {
     background-image:url(img/ljaf.png);
     background-size: auto 80px;
+  }
+}
+
+.fp-viewing-info {
+  .main-navigation {
+    a {
+      color:#fff;
+    }
+    
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a {
+      background-color:#fff;
+      color:$blue;
+    }
+  }
+  .menu-toggle span,
+  .menu-toggle span:after,
+  .menu-toggle span:before {
+    background-color: #fff;
+  }
+  .main-navigation.toggled a {
+    color:$blue;
   }
 }
 
@@ -302,7 +328,7 @@ input[type="submit"] {
 
 
 .register.section {
-  background-color:#f5f5f5;
+  background-color:$grey-light;
   
   form {
     max-width:640px;
@@ -322,6 +348,7 @@ input[type="submit"] {
   position: absolute;
 }
 
+   
 /* ==========================================================================
    Content Page
    ========================================================================== */
@@ -333,6 +360,7 @@ input[type="submit"] {
     margin-left:auto;
     margin-right:auto;
     padding:20px;
+    position:relative;
     
     a {
       img {

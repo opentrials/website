@@ -6,6 +6,10 @@ Template Name: Holding Page
 get_header(); ?>  
   
   <a class="opentrials logo"></a>
+  <nav id="site-navigation" class="main-navigation" role="navigation">
+    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
+    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+  </nav>
   <div id="holdingpage">
     <div class="intro section">
       <h1><?php bloginfo( 'name' ); ?></h1>

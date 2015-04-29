@@ -1,0 +1,177 @@
+.main-navigation {
+	position:absolute;
+  top:42px;
+  right:0;
+  z-index:1;
+  
+  .menu-main-menu-container {
+    padding-top:10px;
+    clear:both;
+  }
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+    color:$grey;
+    font-weight:normal;
+    padding:10px 16px;
+    border-radius:22px;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+    background-color:$grey-light;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+  margin-right:10px;
+  float:right;
+  display: block;
+  width: 28px;
+  height: 30px;
+  padding:0;
+  border:none;
+  background-color:transparent;
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+.menu-toggle span:after{
+  top: 9px;
+}
+.menu-toggle span {
+  position: relative;
+  display: block;
+}
+
+.menu-toggle span,
+.menu-toggle span:after,
+.menu-toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: $grey;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+
+.main-navigation.toggled {
+  
+  .menu-toggle span {
+    background-color: transparent;
+  }
+  .menu-toggle span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+   
+  ul {
+    
+    background-color:#fff;
+    
+    li {
+      float:none;
+      
+      a {
+        border-radius:0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	& .nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	& .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
