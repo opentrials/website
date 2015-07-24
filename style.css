@@ -4,7 +4,7 @@ Theme URI: http://opentrials.net/
 Author: Sam Smith, for Open Knowledge
 Author URI: http://okfn.org/
 Description: Theme for Open Trials
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: open-trials
@@ -377,7 +377,6 @@ th {
   right: 0;
   z-index: 1; }
   .main-navigation .menu-main-menu-container {
-    padding-top: 10px;
     clear: both; }
   .main-navigation ul {
     display: none;
@@ -599,6 +598,10 @@ input[type="submit"] {
 /* ==========================================================================
    Holding Page
    ========================================================================== */
+.page-template-page-holding .main-navigation {
+  right: 20px;
+  top: 20px; }
+
 .logo {
   background-repeat: no-repeat; }
 
@@ -673,14 +676,18 @@ input[type="submit"] {
 .fp-viewing-info .main-navigation.toggled a {
   color: #12b2e3; }
 
-.fp-viewing-register .logo {
+.fp-viewing-register .logo,
+.fp-viewing-contribute .logo {
   background-position: left -60px; }
 .fp-viewing-register .ok.logo,
 .fp-viewing-register .cos.logo,
-.fp-viewing-register .ljaf.logo {
+.fp-viewing-register .ljaf.logo,
+.fp-viewing-contribute .ok.logo,
+.fp-viewing-contribute .cos.logo,
+.fp-viewing-contribute .ljaf.logo {
   background-position: left -40px; }
 
-.intro {
+.intro.section {
   padding-left: 20%;
   padding-right: 20%;
   text-align: center;
@@ -689,10 +696,10 @@ input[type="submit"] {
   background-image: url(img/bg.jpg);
   background-repeat: no-repeat;
   background-position: right top; }
-  .intro a {
+  .intro.section a {
     color: #fff; }
-  .intro a.register,
-  .intro a.follow {
+  .intro.section a.register,
+  .intro.section a.follow {
     display: inline-block;
     height: 40px;
     line-height: 42px;
@@ -707,32 +714,32 @@ input[type="submit"] {
     margin-top: 10px;
     background-color: #fff;
     color: #12b2e3; }
-    .intro a.register:hover,
-    .intro a.follow:hover {
+    .intro.section a.register:hover,
+    .intro.section a.follow:hover {
       background-color: #fff;
       color: #12b2e3; }
-  .intro a.register {
+  .intro.section a.register {
     margin-right: 10px; }
   @media only screen and (max-width: 700px) {
-    .intro {
+    .intro.section {
       padding: 20px; } }
-  .intro h1 {
+  .intro.section h1 {
     font-size: 88px;
     margin: 0; }
     @media only screen and (max-width: 700px) {
-      .intro h1 {
+      .intro.section h1 {
         border: 0;
         clip: rect(0 0 0 0);
         height: 80px;
         overflow: hidden;
         padding: 0;
         width: 1px; } }
-  .intro .tagline {
+  .intro.section .tagline {
     margin-top: -10px;
     display: block;
     font-size: 38px; }
     @media only screen and (max-width: 700px) {
-      .intro .tagline {
+      .intro.section .tagline {
         border: 0;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -742,22 +749,86 @@ input[type="submit"] {
         position: absolute;
         width: 1px; } }
   @media only screen and (max-width: 700px) {
-    .intro p {
+    .intro.section p {
       text-align: left; } }
+  .intro.section .news {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 380px;
+    padding: 18px 20px;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #fff;
+    color: #3B3B3A; }
+    .intro.section .news:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-width: 16px 16px 0 0;
+      border-style: solid;
+      border-color: #12b2e3 rgba(18, 178, 227, 0.2) #12b2e3 #12b2e3; }
+    .intro.section .news h1, .intro.section .news h2, .intro.section .news h3, .intro.section .news h4, .intro.section .news h5, .intro.section .news h6 {
+      margin-top: 3px;
+      margin-bottom: 2px;
+      font-size: inherit; }
+    .intro.section .news a {
+      color: #12b2e3;
+      text-decoration: none;
+      font-weight: bold; }
 
 .fp-responsive a.register {
   display: none; }
+.fp-responsive .intro .news {
+  position: static;
+  width: auto; }
+  .fp-responsive .intro .news:before {
+    display: none; }
 
-.register.section {
+.section {
   background-color: #F5F5F5; }
-  .register.section form {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px; }
-    .register.section form legend {
-      margin-bottom: 20px; }
+
+.register.section form,
+.contribute.section form {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.register legend,
+.contribute legend {
+  margin-bottom: 20px; }
+.register ul,
+.contribute ul {
+  padding: 0;
+  margin-top: 5px; }
+  .register ul li,
+  .contribute ul li {
+    display: block;
+    margin-bottom: 10px; }
+    .register ul li input,
+    .contribute ul li input {
+      float: left; }
+    .register ul li label,
+    .contribute ul li label {
+      margin-left: 20px;
+      display: block;
+      font-size: 0.8em; }
+      .register ul li label strong,
+      .contribute ul li label strong {
+        display: block;
+        font-size: 1.2em;
+        line-height: 1; }
+@media only screen and (min-width: 700px) {
+  .register .field-group,
+  .contribute .field-group {
+    float: left;
+    width: 48%; }
+    .register .field-group:nth-of-type(even),
+    .contribute .field-group:nth-of-type(even) {
+      float: right; } }
 
 .hidden-from-view {
   left: -5000px;
@@ -766,28 +837,41 @@ input[type="submit"] {
 /* ==========================================================================
    Content Page
    ========================================================================== */
-.page-template-default > header {
+.page-template-default > header,
+.page-template-page-contribute > header {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
   position: relative; }
-  .page-template-default > header a img {
+  .page-template-default > header a img,
+  .page-template-page-contribute > header a img {
     height: 73px; }
-.page-template-default article.page .entry-header {
+.page-template-default article.page .entry-header,
+.page-template-page-contribute article.page .entry-header {
   background-color: #12b2e3;
   background-image: url(img/bg.jpg);
   background-repeat: no-repeat;
   background-position: right top;
   color: #fff;
   margin-bottom: 30px; }
-  .page-template-default article.page .entry-header .entry-title {
+  .page-template-default article.page .entry-header .entry-title,
+  .page-template-page-contribute article.page .entry-header .entry-title {
     max-width: 940px;
     margin: 0 auto;
     padding: 30px 20px;
     font-size: 62px; }
 .page-template-default article.page .entry-content,
-.page-template-default article.page .entry-footer {
+.page-template-default article.page .entry-footer,
+.page-template-page-contribute article.page .entry-content,
+.page-template-page-contribute article.page .entry-footer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.page-template-page-contribute > form {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -855,7 +939,8 @@ input[type="submit"] {
   display: table;
   /* 2 */ }
 
-.clearfix:after {
+.clearfix:after,
+.clear {
   clear: both; }
 
 /* ==========================================================================

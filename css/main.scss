@@ -144,6 +144,13 @@ input[type="submit"] {
    Holding Page
    ========================================================================== */
 
+.page-template-page-holding {
+  .main-navigation {
+    right: 20px;
+    top: 20px;
+  }
+}
+
 .logo {
   background-repeat:no-repeat;
 }
@@ -238,7 +245,8 @@ input[type="submit"] {
   }
 }
 
-.fp-viewing-register {
+.fp-viewing-register,
+.fp-viewing-contribute {
   .logo {
     background-position:left -60px;
   }
@@ -249,7 +257,7 @@ input[type="submit"] {
   }
 }
 
-.intro {
+.intro.section {
   $background-colour: $blue;
   $colour: #fff;
   padding-left:20%;
@@ -318,17 +326,64 @@ input[type="submit"] {
       text-align:left;
     }
   }
+  
+  
+  .news {
+    position:absolute;
+    top:0;
+    left:20px;
+    width:380px;
+    padding:18px 20px;
+    margin-top:20px;
+    text-align:left;
+    background-color:#fff;
+    color:$grey;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-width: 16px 16px 0 0;
+      border-style: solid;
+      border-color: $blue rgba($blue,0.20) $blue $blue;
+    }
+    
+    h1,h2,h3,h4,h5,h6 {
+      margin-top:3px;
+      margin-bottom:2px;
+      font-size:inherit;
+    }
+    
+    a {
+      color:$blue;
+      text-decoration:none;
+      font-weight:bold;
+    }
+  }
 }
+
 
 .fp-responsive {
   a.register {
     display:none;
   }
+  
+  .intro .news {
+    position:static;
+    width:auto;
+    
+    &:before {
+      display:none;
+    }
+  }
 }
 
-
-.register.section {
+.section {
   background-color:$grey-light;
+}
+.register.section,
+.contribute.section {
   
   form {
     max-width:640px;
@@ -336,9 +391,49 @@ input[type="submit"] {
     margin-right:auto;
     padding-left:20px;
     padding-right:20px;
+  }
+}
+  
+.register,
+.contribute {
+  
+  legend {
+    margin-bottom:20px;
+  }
+  
+  ul {
+    padding:0;
+    margin-top:5px;
     
-    legend {
-      margin-bottom:20px;
+    li {
+      display:block;
+      margin-bottom:10px;
+      
+      input {
+        float:left;
+      }
+      label {
+        margin-left:20px;
+        display:block;
+        font-size:0.8em;
+        
+        strong {
+          display:block;
+          font-size:1.2em;
+          line-height:1;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 700px) {
+    .field-group {
+      float:left;
+      width:48%;
+      
+      &:nth-of-type(even) {
+        float:right;
+      }
     }
   }
 }
@@ -353,7 +448,8 @@ input[type="submit"] {
    Content Page
    ========================================================================== */
    
-.page-template-default {
+.page-template-default,
+.page-template-page-contribute {
   
   & > header {
     max-width:940px;
@@ -397,6 +493,15 @@ input[type="submit"] {
   }
 }
 
+.page-template-page-contribute {
+  & > form {
+    max-width:940px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
    
 /* ==========================================================================
    Helper classes
@@ -468,10 +573,11 @@ input[type="submit"] {
     display: table; /* 2 */
 }
 
-.clearfix:after {
+.clearfix:after,
+.clear  {
     clear: both;
 }
-
+  
 
 
 /* ==========================================================================
