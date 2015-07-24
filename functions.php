@@ -102,11 +102,12 @@ add_action( 'widgets_init', 'open_trials_widgets_init' );
 function open_trials_scripts() {
 	wp_enqueue_style( 'open-trials-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'open-trials-nav', get_template_directory_uri() . '/js/navigation.js', array(), '20130115', true );
+	wp_enqueue_script( 'open-trials-main', get_template_directory_uri() . '/js/main.js', array(), '20130115', true );
 
 	if ( is_page_template( 'page-holding.php' ) ) {
     wp_enqueue_style( 'fullpage', get_template_directory_uri() . '/css/fullPage.css');
     wp_enqueue_script( 'open-trials-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
-	  wp_enqueue_script( 'open-trials-main', get_template_directory_uri() . '/js/main.js', array(), '20130115', true );
+    wp_enqueue_script( 'open-trials-holding', get_template_directory_uri() . '/js/holding.js', array(), '20130115', true );
   }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
