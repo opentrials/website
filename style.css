@@ -4,7 +4,7 @@ Theme URI: https://github.com/okfn/opentrials
 Author: Sam Smith, for Open Knowledge
 Author URI: http://okfn.org/
 Description: Theme for opentrials.net holding page
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: open-trials
@@ -581,7 +581,7 @@ input[type="submit"] {
   color: #12b2e3;
   border: solid 5px #12b2e3;
   background-color: #fff;
-  line-height: 32px; }
+  line-height: 1; }
   input[type="submit"]:hover {
     background-color: #12b2e3;
     color: #fff; }
