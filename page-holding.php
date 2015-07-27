@@ -21,8 +21,14 @@ get_header(); ?>
       <a class="register" href="#register">Register for Updates</a> <a class="follow" href="https://twitter.com/opentrials">Follow on Twitter</a>
       
       <div class="news">
-         <h4>Want to contribute to OpenTrials?</h4> We are looking for <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong> and potential <strong>users</strong>. <br>
-<a href="#contribute">Get in touch</a>
+        <h4>Want to contribute to OpenTrials?</h4> We are looking for:
+        <ul>
+         <li><a href="#contribute">data partners</a></li>
+         <li><a href="#contribute">funding partners</a></li>
+         <li><a href="#contribute">community partners</a></li>
+         <li><a href="#contribute">users</a></li>
+        </ul>
+        <a href="#contribute">Get in touch</a>
       </div>
       
     </div>
@@ -94,13 +100,16 @@ get_header(); ?>
             <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3">
           </div>
           
+          <label for="mce-MMERGE4">Additional Information </label>
+	<input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4">
+          
           <div class="input-group clear">
             I'm interested in becoming a
-            <ul><li><input type="checkbox" value="1" name="group[7201][1]" id="mce-group[7201]-7201-0"><label for="mce-group[7201]-7201-0"><strong>Data partner</strong> - Do you have data to contribute to Open Trials?  Sign up to make your data discoverable and we will be in touch with you shortly.</label>
+            <ul><li><input type="checkbox" value="1" name="group[7201][1]" id="mce-group[7201]-7201-0"><label for="mce-group[7201]-7201-0"><strong>Data partner</strong> Do you have data to contribute to Open Trials? <span>Sign up to make your data discoverable and we will be in touch with you shortly.</span></label>
             </li>
-            <li><input type="checkbox" value="2" name="group[7201][2]" id="mce-group[7201]-7201-1"><label for="mce-group[7201]-7201-1"><strong>Funding partner</strong> - Are you able to contribute financially, have a suggestion for a funding opportunity or are able to donate in-kind resources? Sign up and we will get in touch with you.</label></li>
-            <li><input type="checkbox" value="4" name="group[7201][4]" id="mce-group[7201]-7201-2"><label for="mce-group[7201]-7201-2"><strong>Community partner</strong> - Are you able to promote this project to your network and/or contribute to the project?  Sign up for updates.</label></li>
-            <li><input type="checkbox" value="8" name="group[7201][8]" id="mce-group[7201]-7201-3"><label for="mce-group[7201]-7201-3"><strong>User</strong> - Are you a user of Open Trials? Perhaps you are a researcher, a medical professional, a trialist or a patient, or just curious.  Sign up, and we will send you updates as the project progresses.</label></li>
+            
+            <li><input type="checkbox" value="4" name="group[7201][4]" id="mce-group[7201]-7201-2"><label for="mce-group[7201]-7201-2"><strong>Community partner</strong> Are you able to promote this project to your network and/or contribute to the project?  <span>Sign up for updates.</span></label></li><li><input type="checkbox" value="2" name="group[7201][2]" id="mce-group[7201]-7201-1"><label for="mce-group[7201]-7201-1"><strong>Funding partner</strong> Are you able to contribute financially, have a suggestion for a funding opportunity or are able to donate in-kind resources? <span>Sign up and we will get in touch with you.</span></label></li>
+            <li><input type="checkbox" value="8" name="group[7201][8]" id="mce-group[7201]-7201-3"><label for="mce-group[7201]-7201-3"><strong>User</strong> Are you a user of Open Trials? Perhaps you are a researcher, a medical professional, a trialist or a patient, or just curious. <span>Sign up, and we will send you updates as the project progresses.</span></label></li>
             </ul>
           </div>
           

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#holdingpage').fullpage({
-      responsive: 700,
+      responsive: 1200,
       anchors:['info', 'register', 'contribute'],
     });
 });

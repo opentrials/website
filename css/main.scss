@@ -2,6 +2,8 @@ $blue: #12b2e3;
 $grey: #3B3B3A;
 $grey-light: #F5F5F5;
 
+$wide: 1200px;
+
 @import "normalize";
 @import "menus";
 
@@ -169,7 +171,7 @@ input[type="submit"] {
     background-size: 225px 120px;
   }
   
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: $wide) {
     position: fixed;
     top:auto;
     bottom:25px;
@@ -180,7 +182,7 @@ input[type="submit"] {
   text-align:center;
   padding-top:10px;
   padding-bottom:10px;
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: $wide) {
     position: fixed;
     bottom:15px;
     right:25px;
@@ -286,14 +288,14 @@ input[type="submit"] {
     margin-right:10px;
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: $wide) {
     padding:20px;
   }
 
   h1 {
     font-size:88px;
     margin:0;
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $wide) {
       border: 0;
       clip: rect(0 0 0 0);
       height: 80px;
@@ -308,7 +310,7 @@ input[type="submit"] {
     display:block;
     font-size:38px;
     
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $wide) {
       border: 0;
       clip: rect(0 0 0 0);
       height: 1px;
@@ -322,7 +324,7 @@ input[type="submit"] {
   
   p {
     
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $wide) {
       text-align:left;
     }
   }
@@ -332,7 +334,6 @@ input[type="submit"] {
     position:absolute;
     top:0;
     left:20px;
-    width:380px;
     padding:18px 20px;
     margin-top:20px;
     text-align:left;
@@ -384,6 +385,9 @@ input[type="submit"] {
 }
 .register.section,
 .contribute.section {
+  h2 {
+    margin:0 0 10px 0;
+  }
   
   form {
     max-width:640px;
@@ -391,6 +395,10 @@ input[type="submit"] {
     margin-right:auto;
     padding-left:20px;
     padding-right:20px;
+    
+    .button {
+      margin-bottom:10px;
+    }
   }
 }
   
@@ -403,11 +411,19 @@ input[type="submit"] {
   
   ul {
     padding:0;
-    margin-top:5px;
+    margin-top:10px;
     
     li {
       display:block;
-      margin-bottom:10px;
+      margin-bottom:15px;
+      float:left;
+      width:48%;
+      clear:both;
+      
+      &:nth-of-type(even) {
+        float:right;
+        clear:right;
+      }
       
       input {
         float:left;
@@ -422,11 +438,19 @@ input[type="submit"] {
           font-size:1.2em;
           line-height:1;
         }
+        
+        span {
+          display:none;
+          
+          @media only screen and (min-height: 750px) {
+            display: inline;
+          }
+        }
       }
     }
   }
   
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: $wide) {
     .field-group {
       float:left;
       width:48%;

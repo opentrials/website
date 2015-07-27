@@ -1,10 +1,10 @@
 /*
 Theme Name: Open Trials
-Theme URI: http://opentrials.net/
+Theme URI: https://github.com/okfn/opentrials
 Author: Sam Smith, for Open Knowledge
 Author URI: http://okfn.org/
-Description: Theme for Open Trials
-Version: 1.1.0
+Description: Theme for opentrials.net holding page
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: open-trials
@@ -617,7 +617,7 @@ input[type="submit"] {
   .backgroundsize .opentrials.logo {
     background-image: url(img/logo.png);
     background-size: 225px 120px; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 1200px) {
     .opentrials.logo {
       position: fixed;
       top: auto;
@@ -627,7 +627,7 @@ input[type="submit"] {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 1200px) {
     .logos {
       position: fixed;
       bottom: 15px;
@@ -720,13 +720,13 @@ input[type="submit"] {
       color: #12b2e3; }
   .intro.section a.register {
     margin-right: 10px; }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1200px) {
     .intro.section {
       padding: 20px; } }
   .intro.section h1 {
     font-size: 88px;
     margin: 0; }
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 1200px) {
       .intro.section h1 {
         border: 0;
         clip: rect(0 0 0 0);
@@ -738,7 +738,7 @@ input[type="submit"] {
     margin-top: -10px;
     display: block;
     font-size: 38px; }
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 1200px) {
       .intro.section .tagline {
         border: 0;
         clip: rect(0 0 0 0);
@@ -748,14 +748,13 @@ input[type="submit"] {
         padding: 0;
         position: absolute;
         width: 1px; } }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1200px) {
     .intro.section p {
       text-align: left; } }
   .intro.section .news {
     position: absolute;
     top: 0;
     left: 20px;
-    width: 380px;
     padding: 18px 20px;
     margin-top: 20px;
     text-align: left;
@@ -789,6 +788,9 @@ input[type="submit"] {
 .section {
   background-color: #F5F5F5; }
 
+.register.section h2,
+.contribute.section h2 {
+  margin: 0 0 10px 0; }
 .register.section form,
 .contribute.section form {
   max-width: 640px;
@@ -796,6 +798,9 @@ input[type="submit"] {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px; }
+  .register.section form .button,
+  .contribute.section form .button {
+    margin-bottom: 10px; }
 
 .register legend,
 .contribute legend {
@@ -803,11 +808,18 @@ input[type="submit"] {
 .register ul,
 .contribute ul {
   padding: 0;
-  margin-top: 5px; }
+  margin-top: 10px; }
   .register ul li,
   .contribute ul li {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 15px;
+    float: left;
+    width: 48%;
+    clear: both; }
+    .register ul li:nth-of-type(even),
+    .contribute ul li:nth-of-type(even) {
+      float: right;
+      clear: right; }
     .register ul li input,
     .contribute ul li input {
       float: left; }
@@ -821,7 +833,14 @@ input[type="submit"] {
         display: block;
         font-size: 1.2em;
         line-height: 1; }
-@media only screen and (min-width: 700px) {
+      .register ul li label span,
+      .contribute ul li label span {
+        display: none; }
+        @media only screen and (min-height: 750px) {
+          .register ul li label span,
+          .contribute ul li label span {
+            display: inline; } }
+@media only screen and (min-width: 1200px) {
   .register .field-group,
   .contribute .field-group {
     float: left;
