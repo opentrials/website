@@ -1,9 +1,9 @@
 #Open Trials Holding Page
 
-##Wordpress
+##Wordpress (deprecated)
 
 The `main` branch contains a Wordpress theme.
 
-##Static
+##Static (staging)
 
 `gh-pages` contains a stand-alone page.
