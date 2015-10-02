@@ -38,6 +38,7 @@ html {
     font-size: 1em;
     line-height: 1.4;
     overflow-x: hidden;
+    background-color: darken($blue, 7);
 }
 
 body {
@@ -238,6 +239,8 @@ mark {
 
 body > section {
     padding: $base-spacing;
+    background-color: #fff;
+    
     @media (min-width: $medium-screen) {
         padding-top: $base-spacing * 2;
         padding-bottom: $base-spacing * 2;

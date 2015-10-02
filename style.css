@@ -770,7 +770,8 @@ html {
   color: #333;
   font-size: 1em;
   line-height: 1.4;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #0f98c2; }
 
 @media (min-width: 40em) {
   body {
@@ -957,7 +958,8 @@ mark {
         display: block; } }
 
 body > section {
-  padding: 1.5em; }
+  padding: 1.5em;
+  background-color: #fff; }
   @media (min-width: 40em) {
     body > section {
       padding-top: 3em;
@@ -1381,6 +1383,8 @@ ul.long {
   padding: 0;
   border: none;
   background-color: transparent; }
+  .menu-toggle:hover, .menu-toggle:focus {
+    background-color: transparent; }
 
 .menu-toggle span:after,
 .menu-toggle span:before {
@@ -1449,39 +1453,47 @@ ul.long {
 /* ==========================================================================
    Content Page
    ========================================================================== */
-.page-template-default > header,
-.page-template-page-contribute > header {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  position: relative; }
-  .page-template-default > header a img,
-  .page-template-page-contribute > header a img {
-    height: 73px; }
-.page-template-default article.page .entry-header,
-.page-template-page-contribute article.page .entry-header {
-  background-color: #12b2e3;
-  background-image: url(img/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: right top;
-  color: #fff;
-  margin-bottom: 30px; }
-  .page-template-default article.page .entry-header .entry-title,
-  .page-template-page-contribute article.page .entry-header .entry-title {
+.page-template-default {
+  text-align: left;
+  background-color: #fff;
+  height: auto; }
+  .page-template-default > header {
     max-width: 940px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    font-size: 62px; }
-.page-template-default article.page .entry-content,
-.page-template-default article.page .entry-footer,
-.page-template-page-contribute article.page .entry-content,
-.page-template-page-contribute article.page .entry-footer {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px; }
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    position: relative; }
+    .page-template-default > header a {
+      display: block;
+      overflow: hidden; }
+      .page-template-default > header a img {
+        height: 73px;
+        margin-left: -48px; }
+        @media (min-width: 40em) {
+          .page-template-default > header a img {
+            margin-left: 0; } }
+  .page-template-default article.page .entry-header {
+    background-color: #12b2e3;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #fff;
+    margin-bottom: 30px; }
+    .page-template-default article.page .entry-header .entry-title {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      font-size: 50px; }
+      @media (min-width: 40em) {
+        .page-template-default article.page .entry-header .entry-title {
+          font-size: 62px; } }
+  .page-template-default article.page .entry-content,
+  .page-template-default article.page .entry-footer {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .page-template-page-contribute > form {
   max-width: 940px;

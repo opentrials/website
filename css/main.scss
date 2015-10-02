@@ -16,8 +16,10 @@
    Content Page
    ========================================================================== */
    
-.page-template-default,
-.page-template-page-contribute {
+.page-template-default {
+    text-align: left;
+    background-color: #fff;
+    height: auto;
   
   & > header {
     max-width:940px;
@@ -27,8 +29,15 @@
     position:relative;
     
     a {
+        display: block;
+        overflow: hidden;
       img {
-        height:73px;
+          height:73px;
+          margin-left: -48px;
+          
+          @media (min-width: $medium-screen) {
+              margin-left: 0;
+          }
       }
     }
   }
@@ -46,7 +55,11 @@
         max-width:940px;
         margin:0 auto;
         padding:30px 20px;
-        font-size:62px;
+        font-size:50px;
+          
+          @media (min-width: $medium-screen) {
+            font-size:62px;
+          }
       }
     }
     
