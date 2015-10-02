@@ -1,0 +1,81 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: $small-spacing 0 $small-spacing / 3 * 2 0;
+    
+    &:first-child {
+        margin-top: 0;
+    }
+    
+    small {
+        color: $medium-gray;
+        display: block;
+        font-weight: normal;
+    }
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+    color: $blue;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+    
+    @media (min-width: $large-screen) {
+        margin: $base-spacing * 2 0;
+    }
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
