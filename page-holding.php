@@ -5,6 +5,12 @@ Template Name: Holding Page
 
 get_header(); ?>
 
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    </nav>
+
+
 <header class="intro">
             <div class="news">
                 <a href="#contribute">We are looking for: <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong>, <strong>individual partners</strong> &amp; <strong>users</strong>.</a>
