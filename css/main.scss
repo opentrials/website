@@ -62,7 +62,8 @@
 
             .entry-title,
             .entry-sub-title,
-            .entry-meta {
+            .entry-meta,
+            .breadcrumb {
                 @include outer-container;
                 padding-left: 20px;
                 padding-right: 20px;
@@ -96,6 +97,21 @@
                 
                 .updated {
                     display: none;
+                }
+                
+                .breadcrumb {
+                    li {
+                        display: inline-block;
+                        font-weight: 400;
+                        
+                        a {
+                            font-weight: 200;
+                            
+                            &:after {
+                                content: ' \203A';
+                            }
+                        }
+                    }
                 }
             }
         }

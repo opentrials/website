@@ -9,6 +9,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <p class="entry-sub-title"><?php the_field('sub-title'); ?></p>
+		<div class="entry-header-bar">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+                </li>
+                <li>
+                    <?php the_title(); ?>
+                </li>
+            </ul>
+        </div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

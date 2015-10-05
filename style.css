@@ -1503,15 +1503,19 @@ ul.long {
     .page-template-default article.page .entry-header .entry-title,
     .page-template-default article.page .entry-header .entry-sub-title,
     .page-template-default article.page .entry-header .entry-meta,
+    .page-template-default article.page .entry-header .breadcrumb,
     .page-template-default article.post .entry-header .entry-title,
     .page-template-default article.post .entry-header .entry-sub-title,
     .page-template-default article.post .entry-header .entry-meta,
+    .page-template-default article.post .entry-header .breadcrumb,
     .single-post article.page .entry-header .entry-title,
     .single-post article.page .entry-header .entry-sub-title,
     .single-post article.page .entry-header .entry-meta,
+    .single-post article.page .entry-header .breadcrumb,
     .single-post article.post .entry-header .entry-title,
     .single-post article.post .entry-header .entry-sub-title,
-    .single-post article.post .entry-header .entry-meta {
+    .single-post article.post .entry-header .entry-meta,
+    .single-post article.post .entry-header .breadcrumb {
       max-width: 68rem;
       margin-left: auto;
       margin-right: auto;
@@ -1520,15 +1524,19 @@ ul.long {
       .page-template-default article.page .entry-header .entry-title::after,
       .page-template-default article.page .entry-header .entry-sub-title::after,
       .page-template-default article.page .entry-header .entry-meta::after,
+      .page-template-default article.page .entry-header .breadcrumb::after,
       .page-template-default article.post .entry-header .entry-title::after,
       .page-template-default article.post .entry-header .entry-sub-title::after,
       .page-template-default article.post .entry-header .entry-meta::after,
+      .page-template-default article.post .entry-header .breadcrumb::after,
       .single-post article.page .entry-header .entry-title::after,
       .single-post article.page .entry-header .entry-sub-title::after,
       .single-post article.page .entry-header .entry-meta::after,
+      .single-post article.page .entry-header .breadcrumb::after,
       .single-post article.post .entry-header .entry-title::after,
       .single-post article.post .entry-header .entry-sub-title::after,
-      .single-post article.post .entry-header .entry-meta::after {
+      .single-post article.post .entry-header .entry-meta::after,
+      .single-post article.post .entry-header .breadcrumb::after {
         clear: both;
         content: "";
         display: table; }
@@ -1573,6 +1581,22 @@ ul.long {
       .single-post article.page .entry-header .entry-header-bar .updated,
       .single-post article.post .entry-header .entry-header-bar .updated {
         display: none; }
+      .page-template-default article.page .entry-header .entry-header-bar .breadcrumb li,
+      .page-template-default article.post .entry-header .entry-header-bar .breadcrumb li,
+      .single-post article.page .entry-header .entry-header-bar .breadcrumb li,
+      .single-post article.post .entry-header .entry-header-bar .breadcrumb li {
+        display: inline-block;
+        font-weight: 400; }
+        .page-template-default article.page .entry-header .entry-header-bar .breadcrumb li a,
+        .page-template-default article.post .entry-header .entry-header-bar .breadcrumb li a,
+        .single-post article.page .entry-header .entry-header-bar .breadcrumb li a,
+        .single-post article.post .entry-header .entry-header-bar .breadcrumb li a {
+          font-weight: 200; }
+          .page-template-default article.page .entry-header .entry-header-bar .breadcrumb li a:after,
+          .page-template-default article.post .entry-header .entry-header-bar .breadcrumb li a:after,
+          .single-post article.page .entry-header .entry-header-bar .breadcrumb li a:after,
+          .single-post article.post .entry-header .entry-header-bar .breadcrumb li a:after {
+            content: ' \203A'; }
   .page-template-default article.page .entry-content,
   .page-template-default article.page .entry-footer,
   .page-template-default article.post .entry-content,
