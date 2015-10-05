@@ -7,8 +7,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <header>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri() ?>/img/opentrials.png" alt="Open Trials"></a>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav>
+    </header>
+
+
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,8 +32,7 @@ get_header(); ?>
 
 		<?php endwhile; // end of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

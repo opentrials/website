@@ -855,7 +855,7 @@ mark {
   .intro a {
     color: inherit; }
   .intro > div:not(.news) {
-    max-width: 68em;
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     height: 100%; }
@@ -965,7 +965,7 @@ body > section {
       padding-top: 3em;
       padding-bottom: 3em; } }
   body > section > div {
-    max-width: 68em;
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto; }
     body > section > div::after {
@@ -1110,7 +1110,7 @@ ul.long {
 #board {
   text-align: center; }
   #board figure {
-    max-width: 68em;
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5em; }
@@ -1151,7 +1151,7 @@ ul.long {
   color: #fff;
   padding: 0.75em 1.5em; }
   .site-footer > div {
-    max-width: 68em;
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     text-align: left; }
@@ -1223,7 +1223,7 @@ ul.long {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-.visuallyhidden {
+.visuallyhidden, .screen-reader-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1238,8 +1238,9 @@ ul.long {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .focusable.screen-reader-text:active,
+.visuallyhidden.focusable:focus,
+.focusable.screen-reader-text:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1453,53 +1454,186 @@ ul.long {
 /* ==========================================================================
    Content Page
    ========================================================================== */
-.page-template-default {
+.page-template-default,
+.single-post {
   text-align: left;
   background-color: #fff;
   height: auto; }
-  .page-template-default > header {
-    max-width: 940px;
+  .page-template-default > header,
+  .single-post > header {
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
     position: relative; }
-    .page-template-default > header a {
+    .page-template-default > header::after,
+    .single-post > header::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .page-template-default > header a,
+    .single-post > header a {
       display: block;
       overflow: hidden; }
-      .page-template-default > header a img {
+      .page-template-default > header a img,
+      .single-post > header a img {
         height: 73px;
         margin-left: -48px; }
         @media (min-width: 40em) {
-          .page-template-default > header a img {
+          .page-template-default > header a img,
+          .single-post > header a img {
             margin-left: 0; } }
-  .page-template-default article.page .entry-header {
+  .page-template-default article.page .entry-header,
+  .page-template-default article.post .entry-header,
+  .single-post article.page .entry-header,
+  .single-post article.post .entry-header {
     background-color: #12b2e3;
     background-image: url(img/bg.jpg);
     background-repeat: no-repeat;
     background-position: right top;
     color: #fff;
-    margin-bottom: 30px; }
-    .page-template-default article.page .entry-header .entry-title {
-      max-width: 940px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      font-size: 50px; }
+    margin-bottom: 30px;
+    padding-top: 20px; }
+    .page-template-default article.page .entry-header a,
+    .page-template-default article.post .entry-header a,
+    .single-post article.page .entry-header a,
+    .single-post article.post .entry-header a {
+      color: #fff;
+      font-weight: 400; }
+    .page-template-default article.page .entry-header .entry-title,
+    .page-template-default article.page .entry-header .entry-sub-title,
+    .page-template-default article.page .entry-header .entry-meta,
+    .page-template-default article.post .entry-header .entry-title,
+    .page-template-default article.post .entry-header .entry-sub-title,
+    .page-template-default article.post .entry-header .entry-meta,
+    .single-post article.page .entry-header .entry-title,
+    .single-post article.page .entry-header .entry-sub-title,
+    .single-post article.page .entry-header .entry-meta,
+    .single-post article.post .entry-header .entry-title,
+    .single-post article.post .entry-header .entry-sub-title,
+    .single-post article.post .entry-header .entry-meta {
+      max-width: 68rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .page-template-default article.page .entry-header .entry-title::after,
+      .page-template-default article.page .entry-header .entry-sub-title::after,
+      .page-template-default article.page .entry-header .entry-meta::after,
+      .page-template-default article.post .entry-header .entry-title::after,
+      .page-template-default article.post .entry-header .entry-sub-title::after,
+      .page-template-default article.post .entry-header .entry-meta::after,
+      .single-post article.page .entry-header .entry-title::after,
+      .single-post article.page .entry-header .entry-sub-title::after,
+      .single-post article.page .entry-header .entry-meta::after,
+      .single-post article.post .entry-header .entry-title::after,
+      .single-post article.post .entry-header .entry-sub-title::after,
+      .single-post article.post .entry-header .entry-meta::after {
+        clear: both;
+        content: "";
+        display: table; }
+    .page-template-default article.page .entry-header .entry-title,
+    .page-template-default article.post .entry-header .entry-title,
+    .single-post article.page .entry-header .entry-title,
+    .single-post article.post .entry-header .entry-title {
+      font-size: 50px;
+      margin-bottom: 0;
+      line-height: 1.1; }
       @media (min-width: 40em) {
-        .page-template-default article.page .entry-header .entry-title {
+        .page-template-default article.page .entry-header .entry-title,
+        .page-template-default article.post .entry-header .entry-title,
+        .single-post article.page .entry-header .entry-title,
+        .single-post article.post .entry-header .entry-title {
           font-size: 62px; } }
+    .page-template-default article.page .entry-header .entry-sub-title,
+    .page-template-default article.post .entry-header .entry-sub-title,
+    .single-post article.page .entry-header .entry-sub-title,
+    .single-post article.post .entry-header .entry-sub-title {
+      font-size: 24px;
+      margin-bottom: 0;
+      font-weight: 200;
+      line-height: 1.1; }
+      @media (min-width: 40em) {
+        .page-template-default article.page .entry-header .entry-sub-title,
+        .page-template-default article.post .entry-header .entry-sub-title,
+        .single-post article.page .entry-header .entry-sub-title,
+        .single-post article.post .entry-header .entry-sub-title {
+          font-size: 30px; } }
+    .page-template-default article.page .entry-header .entry-header-bar,
+    .page-template-default article.post .entry-header .entry-header-bar,
+    .single-post article.page .entry-header .entry-header-bar,
+    .single-post article.post .entry-header .entry-header-bar {
+      border-top: solid 1px rgba(255, 255, 255, 0.23);
+      font-weight: 200;
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 40px; }
+      .page-template-default article.page .entry-header .entry-header-bar .updated,
+      .page-template-default article.post .entry-header .entry-header-bar .updated,
+      .single-post article.page .entry-header .entry-header-bar .updated,
+      .single-post article.post .entry-header .entry-header-bar .updated {
+        display: none; }
   .page-template-default article.page .entry-content,
-  .page-template-default article.page .entry-footer {
-    max-width: 940px;
+  .page-template-default article.page .entry-footer,
+  .page-template-default article.post .entry-content,
+  .page-template-default article.post .entry-footer,
+  .single-post article.page .entry-content,
+  .single-post article.page .entry-footer,
+  .single-post article.post .entry-content,
+  .single-post article.post .entry-footer {
+    max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px; }
-
-.page-template-page-contribute > form {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px; }
+    .page-template-default article.page .entry-content::after,
+    .page-template-default article.page .entry-footer::after,
+    .page-template-default article.post .entry-content::after,
+    .page-template-default article.post .entry-footer::after,
+    .single-post article.page .entry-content::after,
+    .single-post article.page .entry-footer::after,
+    .single-post article.post .entry-content::after,
+    .single-post article.post .entry-footer::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .page-template-default article.page .entry-footer .cat-links,
+  .page-template-default article.post .entry-footer .cat-links,
+  .single-post article.page .entry-footer .cat-links,
+  .single-post article.post .entry-footer .cat-links {
+    display: none; }
+  .page-template-default .post-navigation,
+  .single-post .post-navigation {
+    max-width: 68rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none; }
+    .page-template-default .post-navigation::after,
+    .single-post .post-navigation::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .page-template-default .post-navigation .nav-links a,
+    .single-post .post-navigation .nav-links a {
+      display: inline-block;
+      background-color: #F5F5F5;
+      padding: 0.75em 1.5em; }
+  .page-template-default .comments-area,
+  .single-post .comments-area {
+    background-color: #F5F5F5;
+    margin-top: 1.5em; }
+    .page-template-default .comments-area > *,
+    .single-post .comments-area > * {
+      max-width: 68rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px; }
+      .page-template-default .comments-area > *::after,
+      .single-post .comments-area > *::after {
+        clear: both;
+        content: "";
+        display: table; }
 
 /*# sourceMappingURL=style.css.map */
