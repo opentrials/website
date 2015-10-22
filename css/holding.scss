@@ -254,11 +254,6 @@ body > section {
                 @include span-columns(8);
                 @include shift(2);
             }
-            
-            & > a:not(.twitter),
-            & > section > a:not(.twitter) {
-                @include btn;
-            }
         }
     }
     
@@ -327,8 +322,102 @@ body > section {
 
 
 #register {
-    .twitter {
-        font-size: 30px;
+    
+    h2 {
+        color: $medium-gray;
+    }
+    
+    article { 
+        
+        & > a {
+            h3 {
+                margin: 0;
+            }
+                
+            span {
+                color: $medium-gray;
+                font-size: 0.95em;
+            }
+
+            &:hover {
+                span {
+                    color: inherit;
+                }
+            }
+        }
+        
+        @media (min-width: $medium-screen) {
+            @include span-columns(12);
+            @include shift(0);
+            @include fill-parent();
+            @include row(table);
+            padding-top: $small-spacing;
+
+            & > a {
+                @include span-columns(4);
+                border-right: solid 1px $light-gray;
+                padding: $small-spacing;
+                
+                &:before {
+                    @include icon-font();
+                    font-size: 4em;
+                }
+                
+                &.twitter {                    
+                    &:before {
+                        content: "\e900";
+                    }
+                }
+                
+                &.discuss {                    
+                    &:before {
+                        content: "\e902";
+                    }
+                }
+
+                &.subscribe {
+                    @include reset-display;
+                    border: none;
+                    
+                    &:before {
+                        content: "\e901";
+                    }
+                }
+                
+                h3 {
+                    margin-top: -4px;
+                }
+            }
+        }
+    }
+}
+
+.js #signup-form {
+    display: none;
+    padding: $base-spacing;
+    background-color: white;
+    border-radius: $base-border-radius * 2;
+    
+    h4 {
+        text-align: left;
+    }
+    
+    label {
+        padding: 0;
+        margin: 0;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        border-radius: $base-border-radius;
+    }
+    
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: $base-border-radius;
+        height: 50px;
     }
 }
 
@@ -353,6 +442,10 @@ body > section {
             @media (min-width: $large-screen) {
                 padding-top: $base-spacing * 2 ;
             }
+        }
+        
+        & > a {
+            @include btn;
         }
         
         ul.long {

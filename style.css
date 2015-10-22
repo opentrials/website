@@ -607,8 +607,8 @@ picture {
 
 @font-face {
   font-family: 'opentrials';
-  src: url("fonts/opentrials.eot?t4qm6m");
-  src: url("fonts/opentrials.eot?#iefixt4qm6m") format("embedded-opentype"), url("fonts/opentrials.ttf?t4qm6m") format("truetype"), url("fonts/opentrials.woff?t4qm6m") format("woff"), url("fonts/opentrials.svg?t4qm6m#opentrials") format("svg");
+  src: url("fonts/opentrials.eot?i9zkah");
+  src: url("fonts/opentrials.eot?i9zkah#iefix") format("embedded-opentype"), url("fonts/opentrials.ttf?i9zkah") format("truetype"), url("fonts/opentrials.woff?i9zkah") format("woff"), url("fonts/opentrials.svg?i9zkah#opentrials") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -622,6 +622,15 @@ picture {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: "\e900"; }
+
+.icon-mail:before {
+  content: "\e901"; }
+
+.icon-messages:before {
+  content: "\e902"; }
 
 .icon-creative-commons-attribution:before {
   content: "\e600"; }
@@ -981,21 +990,6 @@ body > section {
         margin-left: 17.05961%; }
         body > section > div > article:last-child {
           margin-right: 0; } }
-    body > section > div > article > a:not(.twitter), body > section > div > article > section > a:not(.twitter) {
-      display: inline-block;
-      height: 40px;
-      line-height: 42px;
-      padding: 0 20px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #12b2e3;
-      border: solid 5px #12b2e3;
-      background-color: #fff;
-      box-sizing: content-box; }
-      body > section > div > article > a:not(.twitter):hover, body > section > div > article > section > a:not(.twitter):hover {
-        background-color: #12b2e3;
-        color: #fff; }
   body > section:nth-of-type(even) {
     background-color: #F5F5F5; }
     body > section:nth-of-type(even) hr {
@@ -1038,8 +1032,76 @@ body > section {
     #contribute form .field-group:nth-of-type(even) {
       float: right; } }
 
-#register .twitter {
-  font-size: 30px; }
+#register h2 {
+  color: #999; }
+#register article > a h3 {
+  margin: 0; }
+#register article > a span {
+  color: #999;
+  font-size: 0.95em; }
+#register article > a:hover span {
+  color: inherit; }
+@media (min-width: 40em) {
+  #register article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-left: 0%;
+    width: 100%;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding-top: 0.75em; }
+    #register article:last-child {
+      margin-right: 0; }
+    #register article > a {
+      display: table-cell;
+      width: 33.33333%;
+      border-right: solid 1px #F5F5F5;
+      padding: 0.75em; }
+      #register article > a:before {
+        font-family: 'opentrials';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 4em; }
+      #register article > a.twitter:before {
+        content: "\e900"; }
+      #register article > a.discuss:before {
+        content: "\e902"; }
+      #register article > a.subscribe {
+        border: none; }
+        #register article > a.subscribe:before {
+          content: "\e901"; }
+      #register article > a h3 {
+        margin-top: -4px; } }
+
+.js #signup-form {
+  display: none;
+  padding: 1.5em;
+  background-color: white;
+  border-radius: 6px; }
+  .js #signup-form h4 {
+    text-align: left; }
+  .js #signup-form label {
+    padding: 0;
+    margin: 0; }
+  .js #signup-form input[type="text"],
+  .js #signup-form input[type="email"] {
+    border-radius: 3px; }
+  .js #signup-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 50px; }
 
 #contribute section {
   border-bottom: 1px solid #F5F5F5;
@@ -1058,6 +1120,21 @@ body > section {
     @media (min-width: 53.75em) {
       #contribute section:first-of-type {
         padding-top: 3em; } }
+  #contribute section > a {
+    display: inline-block;
+    height: 40px;
+    line-height: 42px;
+    padding: 0 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #12b2e3;
+    border: solid 5px #12b2e3;
+    background-color: #fff;
+    box-sizing: content-box; }
+    #contribute section > a:hover {
+      background-color: #12b2e3;
+      color: #fff; }
   #contribute section ul.long li {
     margin-bottom: 0.75em; }
     #contribute section ul.long li:last-child {

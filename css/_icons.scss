@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'opentrials';
-	src:url('fonts/opentrials.eot?t4qm6m');
-	src:url('fonts/opentrials.eot?#iefixt4qm6m') format('embedded-opentype'),
-		url('fonts/opentrials.ttf?t4qm6m') format('truetype'),
-		url('fonts/opentrials.woff?t4qm6m') format('woff'),
-		url('fonts/opentrials.svg?t4qm6m#opentrials') format('svg');
+	src:url('fonts/opentrials.eot?i9zkah');
+	src:url('fonts/opentrials.eot?i9zkah#iefix') format('embedded-opentype'),
+		url('fonts/opentrials.ttf?i9zkah') format('truetype'),
+		url('fonts/opentrials.woff?i9zkah') format('woff'),
+		url('fonts/opentrials.svg?i9zkah#opentrials') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,6 +27,15 @@
     @include icon-font();
 }
 
+.icon-twitter:before {
+	content: "\e900";
+}
+.icon-mail:before {
+	content: "\e901";
+}
+.icon-messages:before {
+	content: "\e902";
+}
 .icon-creative-commons-attribution:before {
 	content: "\e600";
 }
