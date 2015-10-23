@@ -858,57 +858,107 @@ mark {
   background-repeat: no-repeat;
   background-position: top right;
   color: #fff; }
-  @media (min-height: 600px) {
-    .intro {
-      height: 100%; } }
   .intro a {
     color: inherit; }
   .intro > div:not(.news) {
     max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
-    height: 100%; }
+    padding-bottom: 1.5em; }
     .intro > div:not(.news)::after {
       clear: both;
       content: "";
       display: table; }
     @media (min-width: 40em) and (min-height: 600px) {
-      .intro > div:not(.news) > div {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 65.88078%;
-        margin-left: 17.05961%; }
-        .intro > div:not(.news) > div:last-child {
-          margin-right: 0; } }
-    @media (min-height: 600px) {
-      .intro > div:not(.news) > div {
-        display: table;
-        height: 100%; } }
-    .intro > div:not(.news) > div > div {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 1.5em; }
-      .intro > div:not(.news) > div > div .updates,
-      .intro > div:not(.news) > div > div .contribute {
-        display: inline-block;
-        height: 40px;
-        line-height: 42px;
-        padding: 0 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #fff;
-        border: solid 5px #fff;
-        background-color: #12b2e3;
-        box-sizing: content-box;
-        margin-top: 10px;
-        background-color: #fff;
-        color: #12b2e3; }
-        .intro > div:not(.news) > div > div .updates:hover,
-        .intro > div:not(.news) > div > div .contribute:hover {
+      .intro > div:not(.news) {
+        padding-top: 50px; } }
+    .intro > div:not(.news) > div {
+      clear: left; }
+      .intro > div:not(.news) > div > div {
+        text-align: left; }
+        @media (min-width: 40em) {
+          .intro > div:not(.news) > div > div {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 48.82117%; }
+            .intro > div:not(.news) > div > div:last-child {
+              margin-right: 0; } }
+      .intro > div:not(.news) > div.logo {
+        margin-bottom: 20px; }
+        .intro > div:not(.news) > div.logo img {
+          height: 120px;
+          display: none; }
+          @media (min-width: 40em) {
+            .intro > div:not(.news) > div.logo img {
+              display: inline; } }
+        .intro > div:not(.news) > div.logo h1 {
+          margin: 0; }
+          @media (min-width: 40em) {
+            .intro > div:not(.news) > div.logo h1 {
+              font-size: 58px; } }
+        .intro > div:not(.news) > div.logo .tagline {
+          font-size: 24px; }
+        .intro > div:not(.news) > div.logo.horizontal {
+          text-align: left;
+          padding-left: 1.5em;
+          padding-right: 1.5em; }
+          .intro > div:not(.news) > div.logo.horizontal img {
+            float: left;
+            margin-right: 10px;
+            height: 100px; }
+          .intro > div:not(.news) > div.logo.horizontal h1 {
+            font-size: 41px; }
+            @media (min-width: 40em) {
+              .intro > div:not(.news) > div.logo.horizontal h1 {
+                padding-top: 11px;
+                text-indent: 6px; } }
+          .intro > div:not(.news) > div.logo.horizontal .tagline {
+            font-size: 19px; }
+            @media (min-width: 40em) {
+              .intro > div:not(.news) > div.logo.horizontal .tagline {
+                display: block;
+                text-indent: 8px;
+                margin-top: -1px; } }
+      .intro > div:not(.news) > div.content > div {
+        padding: 1.5em; }
+        .intro > div:not(.news) > div.content > div.video {
+          display: none; }
+          @media (min-width: 40em) {
+            .intro > div:not(.news) > div.content > div.video {
+              display: block; } }
+          .intro > div:not(.news) > div.content > div.video .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0; }
+            .intro > div:not(.news) > div.content > div.video .videoWrapper iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%; }
+      .intro > div:not(.news) > div .cta {
+        padding-top: 0.375em; }
+        .intro > div:not(.news) > div .cta a {
+          display: inline-block;
+          height: 40px;
+          line-height: 42px;
+          padding: 0 20px;
+          border-radius: 25px;
+          font-weight: bold;
+          text-decoration: none;
+          color: #fff;
+          border: solid 5px #fff;
+          background-color: #12b2e3;
+          box-sizing: content-box;
+          margin-top: 10px;
           background-color: #fff;
           color: #12b2e3; }
+          .intro > div:not(.news) > div .cta a:hover {
+            background-color: #fff;
+            color: #12b2e3; }
   .intro .news {
     background-color: #fff;
     color: #333;
@@ -919,27 +969,6 @@ mark {
       display: block; }
     .intro .news strong {
       color: #12b2e3; }
-    @media (min-width: 40em) and (min-height: 600px) {
-      .intro .news {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        font-size: 15px; } }
-  .intro .logo {
-    margin-bottom: 20px; }
-    .intro .logo img {
-      height: 120px;
-      display: none; }
-      @media (min-width: 40em) {
-        .intro .logo img {
-          display: inline; } }
-    .intro .logo h1 {
-      margin: 0; }
-      @media (min-width: 40em) {
-        .intro .logo h1 {
-          font-size: 58px; } }
-    .intro .logo .tagline {
-      font-size: 24px; }
   .intro p a {
     border-bottom: dotted 1px #fff; }
   .intro .down {

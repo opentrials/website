@@ -125,42 +125,124 @@ mark {
     background-position: top right;
     color: $colour;
     
-    @media (min-height: $full-header) {
-         height: 100%;
-    }
-    
     a {
         color: inherit;
     }
     
     & > div:not(.news) {
         @include outer-container;
-        height: 100%;
+        padding-bottom: $base-spacing;
         
-        
+        @media (min-width: $medium-screen) and (min-height: $full-header) {
+            padding-top: 50px;
+        }
+         
         & > div {
-            @media (min-width: $medium-screen) and (min-height: $full-header) {
-                @include span-columns(8);
-                @include shift(2);
-            }
-            @media (min-height: $full-header) {
-                display: table;
-                height: 100%;
-            }
+            clear: left;
             
             & > div {
-                display: table-cell;
-                vertical-align: middle;
-                padding: $base-spacing;
+                text-align: left;
                 
-                .updates,
-                .contribute {
+                @media (min-width: $medium-screen) {
+                    @include span-columns(6);
+                }
+            }
+            
+            &.logo {
+                margin-bottom: 20px;
+
+                img {
+                    height: 120px;
+                    display: none;
+
+                    @media (min-width: $medium-screen) {
+                        display: inline;
+                    }
+                }
+
+                h1 {
+                    margin: 0;
+                    @media (min-width: $medium-screen) {
+                        font-size: 58px;
+                    }
+                }
+                .tagline {
+                    font-size: 24px;
+                }
+                
+                &.horizontal {
+                    text-align: left;
+                    padding-left: $base-spacing;
+                    padding-right: $base-spacing;
+                    
+                    img {
+                        float: left;
+                        margin-right: 10px;
+                        height: 100px;
+                    }
+                    
+                    h1 {
+                        font-size: 41px;
+                        
+                        @media (min-width: $medium-screen) {
+                            padding-top: 11px;
+                            text-indent: 6px;
+                        }
+                    }
+                    
+                    .tagline {
+                        font-size: 19px;
+                        
+                        @media (min-width: $medium-screen) {
+                            display: block;
+                            text-indent: 8px;
+                            margin-top: -1px;
+                        }
+                    }
+                }
+            }
+
+            &.content {
+                
+                & > div {
+                    padding: $base-spacing;
+                
+                    &.video {
+                        display: none;
+
+                        @media (min-width: $medium-screen) {
+                            display: block;
+                        }
+
+                        .videoWrapper {
+                            position: relative;
+                            padding-bottom: 56.25%; /* 16:9 */
+                            padding-top: 25px;
+                            height: 0;
+
+                            iframe {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cta {
+                padding-top: $small-spacing /2;
+                
+                a {
                     @include btn($background-colour, $colour);
                     margin-top:10px;
                     background-color:$colour;
                     color:$background-colour;
                 }
             }
+            
         }
     }
     
@@ -178,36 +260,7 @@ mark {
         strong {
             color: $blue;
         }
-        
-        @media (min-width: $medium-screen) and (min-height: $full-header) {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            font-size: 15px;
-        }
-    }
-    
-    .logo {
-        margin-bottom: 20px;
-        
-        img {
-            height: 120px;
-            display: none;
-            
-            @media (min-width: $medium-screen) {
-                display: inline;
-            }
-        }
-    
-        h1 {
-            margin: 0;
-            @media (min-width: $medium-screen) {
-                font-size: 58px;
-            }
-        }
-        .tagline {
-            font-size: 24px;
-        }
+
     }
     
     p {
