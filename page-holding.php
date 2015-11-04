@@ -15,7 +15,7 @@ get_header(); ?>
             <a href="#contribute">We are looking for: <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong>, <strong>individual partners</strong> &amp; <strong>users</strong>.</a>
             <a href="#board">We are delighted to present the <strong>Open Trials advisory board</strong>.</a>
         </div>
-        
+
         <div>
             <div class="logo horizontal">
                 <img src="<?php echo get_template_directory_uri() ?>/img/icon.png" alt="">
@@ -30,9 +30,9 @@ get_header(); ?>
                     <?php while ( have_posts() ) : the_post(); ?>
                     <?php the_content(); ?>
                     <?php endwhile; // end of the loop. ?>
-                    
+
                     <div class="cta">
-                        <a href="#register" class="updates">Join the Discussion</a> &nbsp; 
+                        <a href="#register" class="updates">Join the Discussion</a> &nbsp;
                         <a href="#contribute" class="contribute">Contribute to OpenTrials</a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </header>
 
@@ -396,7 +396,7 @@ NETSCC, Matt is responsible for work around the NIHR <a href="http://nets.nihr.a
             </figcaption>
         </figure>
     </section>
-  
+
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
