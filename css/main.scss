@@ -1,12 +1,8 @@
 @import "holding";
 @import "menus";
 
-
 .page-template-page-holding {
   .main-navigation {
-    right: 20px;
-    top: 20px;
-      
       display: none;
   }
 }
@@ -15,145 +11,37 @@
     @extend .visuallyhidden;
 }
 
-/* ==========================================================================
-   Content Page
-   ========================================================================== */
-   
-.page-template-default,
-.single-post {
-    text-align: left;
-    background-color: #fff;
-    height: auto;
-  
-  & > header {
-    @include outer-container;
-    padding:20px;
-    position:relative;
-    
-    a {
-        display: block;
-        overflow: hidden;
-      img {
-          height:73px;
-          margin-left: -48px;
-          
-          @media (min-width: $medium-screen) {
-              margin-left: 0;
-          }
-      }
+.banner {
+    background-color: $blue;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #fff;
+
+    & > div {
+        background-image: url(img/grid.png);
+        background-position: center top;
     }
-  }
-  
-    article.page,
-    article.post {
-        .entry-header {
-            background-color:$blue;
-            background-image:url(img/bg.jpg);
-            background-repeat:no-repeat;
-            background-position:right top;
-            color:#fff;
-            margin-bottom:30px;
-            padding-top: 20px;
-            
-            a {
-                color: #fff;
-                font-weight: 400;
-            }
 
-            .entry-title,
-            .entry-sub-title,
-            .entry-meta,
-            .breadcrumb {
-                @include outer-container;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .entry-title {
-                font-size:50px;
-                margin-bottom: 0;
-                line-height: 1.1;
-
-                @media (min-width: $medium-screen) {
-                    font-size:62px;
-                }
-            }
-            .entry-sub-title {
-                font-size:24px;
-                margin-bottom: 0;
-                font-weight: 200;
-                line-height: 1.1;
-
-                @media (min-width: $medium-screen) {
-                    font-size:30px;
-                }
-            }
-            .entry-header-bar {
-                border-top: solid 1px rgba(255,255,255,0.23);
-                font-weight: 200;
-                margin-top: 20px;
-                font-size: 15px;
-                line-height: 40px;
-                
-                .updated {
-                    display: none;
-                }
-                
-                .breadcrumb {
-                    li {
-                        display: inline-block;
-                        font-weight: 400;
-                        
-                        a {
-                            font-weight: 200;
-                            
-                            &:after {
-                                content: ' \203A';
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .entry-content,
-        .entry-footer {
-            @include outer-container;
-            padding-left:20px;
-            padding-right:20px;
-        }
-        
-        .entry-footer {
-            .cat-links {
-                display: none;
-            }
-        }
-    }
-    
-    .post-navigation {
+    header {
         @include outer-container;
-        padding-left:20px;
-        padding-right:20px;
+        height: 60px;
+        padding-top: $base-spacing;
+        padding-bottom: $base-spacing;
+        box-sizing: content-box;
 
-        display: none;
-        
-        .nav-links {
-            a {
-                display: inline-block;
-                background-color: $light-gray;
-                padding: $small-spacing $base-spacing;
-            }
+        .logo {
+            height: inherit;
+            float: left;
+            display: block;
+            margin-left: $base-spacing;
+        }
+
+        + * {
+            clear: both;
         }
     }
-    
-    .comments-area {
-        background-color: $light-gray;
-        margin-top: $base-spacing;
-        
-        & > * {
-            @include outer-container;
-            padding:20px;
-        }
-    }
+
 }
-
+@import "home";
+@import "content-page";

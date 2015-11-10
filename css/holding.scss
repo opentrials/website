@@ -41,13 +41,6 @@ html {
     background-color: darken($blue, 7);
 }
 
-body {
-    @media (min-width: $medium-screen) {
-        text-align: center;
-    }
-}
-
-
 ::-moz-selection {
     background: $dark-gray;
     text-shadow: none;
@@ -114,178 +107,182 @@ mark {
     padding: 0.2em 0;
 }
 
+.videoWrapper {
+    position: relative;
+    //padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom:48.6%;
+    padding-top: 25px;
+    height: 0;
 
-.intro {
-    $full-header: 600px;
-    $background-colour: $blue;
-    $colour: #fff;
-    background-color: $background-colour;
-    background-image: url(img/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    color: $colour;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.news {
+    background-color: #fff;
+    color: $dark-gray;
+    padding: $small-spacing $base-spacing;
+    font-size: 14px;
+    font-weight: bold;
 
     a {
+        display: block;
         color: inherit;
     }
 
-    & > div:not(.news) {
-        @include outer-container;
-        padding-bottom: $base-spacing;
+    strong {
+        color: $action-color;
+    }
+}
 
-        @media (min-width: $medium-screen) and (min-height: $full-header) {
-            padding-top: 50px;
+.page-template-page-holding {
+    @media (min-width: $medium-screen) {
+        text-align: center;
+    }
+    .intro {
+        $full-header: 600px;
+        $background-colour: $blue;
+        $colour: #fff;
+        background-color: $background-colour;
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        color: $colour;
+
+        a {
+            color: inherit;
         }
 
-        & > div {
-            clear: left;
+        & > div:not(.news) {
+            @include outer-container;
+            padding-bottom: $base-spacing;
+
+            @media (min-width: $medium-screen) and (min-height: $full-header) {
+                padding-top: 50px;
+            }
 
             & > div {
-                text-align: left;
-
-                @media (min-width: $medium-screen) {
-                    @include span-columns(6);
-                }
-            }
-
-            &.logo {
-                margin-bottom: 20px;
-
-                img {
-                    height: 120px;
-                    display: none;
-
-                    @media (min-width: $medium-screen) {
-                        display: inline;
-                    }
-                }
-
-                h1 {
-                    margin: 0;
-                    @media (min-width: $medium-screen) {
-                        font-size: 58px;
-                    }
-                }
-                .tagline {
-                    font-size: 24px;
-                }
-
-                &.horizontal {
-                    text-align: left;
-                    padding-left: $base-spacing;
-                    padding-right: $base-spacing;
-
-                    img {
-                        float: left;
-                        margin-right: 10px;
-                        height: 100px;
-                    }
-
-                    h1 {
-                        font-size: 41px;
-
-                        @media (min-width: $medium-screen) {
-                            padding-top: 11px;
-                            text-indent: 6px;
-                        }
-                    }
-
-                    .tagline {
-                        font-size: 19px;
-
-                        @media (min-width: $medium-screen) {
-                            display: block;
-                            text-indent: 8px;
-                            margin-top: -1px;
-                        }
-                    }
-                }
-            }
-
-            &.content {
+                clear: left;
 
                 & > div {
-                    padding: $base-spacing;
+                    text-align: left;
 
-                    &.video {
+                    @media (min-width: $medium-screen) {
+                        @include span-columns(6);
+                    }
+                }
+
+                &.logo {
+                    margin-bottom: 20px;
+
+                    img {
+                        height: 120px;
                         display: none;
 
                         @media (min-width: $medium-screen) {
-                            display: block;
+                            display: inline;
+                        }
+                    }
+
+                    h1 {
+                        margin: 0;
+                        @media (min-width: $medium-screen) {
+                            font-size: 58px;
+                        }
+                    }
+                    .tagline {
+                        font-size: 24px;
+                    }
+
+                    &.horizontal {
+                        text-align: left;
+                        padding-left: $base-spacing;
+                        padding-right: $base-spacing;
+
+                        img {
+                            float: left;
+                            margin-right: 10px;
+                            height: 100px;
                         }
 
-                        .videoWrapper {
-                            position: relative;
-                            //padding-bottom: 56.25%; /* 16:9 */
-                            padding-bottom:45%;
-                            padding-top: 25px;
-                            height: 0;
+                        h1 {
+                            font-size: 41px;
 
-                            iframe {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
+                            @media (min-width: $medium-screen) {
+                                padding-top: 11px;
+                                text-indent: 6px;
+                            }
+                        }
+
+                        .tagline {
+                            font-size: 19px;
+
+                            @media (min-width: $medium-screen) {
+                                display: block;
+                                text-indent: 8px;
+                                margin-top: -1px;
                             }
                         }
                     }
                 }
-            }
 
-            .cta {
-                padding-top: $small-spacing /2;
+                &.content {
 
-                a {
-                    @include btn($background-colour, $colour);
-                    margin-top:10px;
-                    background-color:$colour;
-                    color:$background-colour;
+                    & > div {
+                        padding: $base-spacing;
+
+                        &.video {
+                            display: none;
+
+                            @media (min-width: $medium-screen) {
+                                display: block;
+                            }
+                        }
+                    }
                 }
+
+                .cta {
+                    padding-top: $small-spacing /2;
+
+                    a {
+                        @include btn($background-colour, $colour);
+                        margin-top:10px;
+                        background-color:$colour;
+                        color:$background-colour;
+                    }
+                }
+
+            }
+        }
+
+        p {
+            a {
+                border-bottom: dotted 1px #fff;
+            }
+        }
+
+        .down {
+            position: absolute;
+            @include icon-font();
+            bottom: $base-spacing / 2;
+            left: 50%;
+            width: 80px;
+            margin-left: -40px;
+            font-size: 30px;
+            display: none;
+
+            &:before {
+                content: "\e602";
             }
 
-        }
-    }
-
-    .news {
-        background-color: #fff;
-        color: $dark-gray;
-        padding: $small-spacing $base-spacing;
-        font-size: 14px;
-        font-weight: bold;
-
-        a {
-            display: block;
-        }
-
-        strong {
-            color: $blue;
-        }
-
-    }
-
-    p {
-        a {
-            border-bottom: dotted 1px #fff;
-        }
-    }
-
-    .down {
-        position: absolute;
-        @include icon-font();
-        bottom: $base-spacing / 2;
-        left: 50%;
-        width: 80px;
-        margin-left: -40px;
-        font-size: 30px;
-        display: none;
-
-        &:before {
-            content: "\e602";
-        }
-
-        @media (min-width: $medium-screen) and (min-height: $full-header) {
-            display: block;
+            @media (min-width: $medium-screen) and (min-height: $full-header) {
+                display: block;
+            }
         }
     }
 }
@@ -376,6 +373,7 @@ body > section {
 
 
 #register {
+    text-align: center;
 
     h2 {
         color: $medium-gray;
@@ -614,7 +612,7 @@ ul.long {
 }
 
 .site-footer {
-    background-color: darken($blue, 7);
+    background-color: $blue;
     color: #fff;
     padding: $base-spacing / 2 $base-spacing;
 

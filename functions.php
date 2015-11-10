@@ -46,7 +46,7 @@ function open_trials_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -105,7 +105,7 @@ function open_trials_scripts() {
     wp_enqueue_script( 'open-trials-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
 	wp_enqueue_script( 'open-trials-main', get_template_directory_uri() . '/js/main.js', array(), '20130115', true );
 
-	if ( is_page_template( 'page-holding.php' ) ) {
+	if ( is_page_template( 'page-holding.php' ) or is_page_template( 'page-home.php' )) {
     wp_enqueue_script( 'open-trials-holding', get_template_directory_uri() . '/js/holding.js', array(), '20130115', true );
   }
 

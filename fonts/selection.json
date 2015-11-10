@@ -21,9 +21,9 @@
 				"code": 59648,
 				"name": "twitter"
 			},
-			"setIdx": 0,
-			"setId": 6,
-			"iconIdx": 96
+			"setIdx": 1,
+			"setId": 3,
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -45,9 +45,9 @@
 				"code": 59649,
 				"name": "mail"
 			},
-			"setIdx": 0,
-			"setId": 6,
-			"iconIdx": 144
+			"setIdx": 1,
+			"setId": 3,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -69,9 +69,9 @@
 				"code": 59650,
 				"name": "messages"
 			},
-			"setIdx": 0,
-			"setId": 6,
-			"iconIdx": 305
+			"setIdx": 1,
+			"setId": 3,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -95,7 +95,7 @@
 				"code": 58880,
 				"name": "creative-commons-attribution"
 			},
-			"setIdx": 4,
+			"setIdx": 2,
 			"setId": 2,
 			"iconIdx": 0
 		},
@@ -119,7 +119,7 @@
 				"code": 58881,
 				"name": "creative-commons"
 			},
-			"setIdx": 4,
+			"setIdx": 2,
 			"setId": 2,
 			"iconIdx": 1
 		},
@@ -143,9 +143,34 @@
 				"code": 58882,
 				"name": "chevron-thin-down"
 			},
-			"setIdx": 4,
+			"setIdx": 2,
 			"setId": 2,
 			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M192 128l640 384-640 384z"
+				],
+				"attrs": [],
+				"tags": [
+					"play",
+					"player"
+				],
+				"grid": 20
+			},
+			"attrs": [],
+			"properties": {
+				"id": 1001,
+				"order": 3,
+				"prevSize": 20,
+				"ligatures": "play3, player8",
+				"name": "play",
+				"code": 59651
+			},
+			"setIdx": 3,
+			"setId": 0,
+			"iconIdx": 284
 		}
 	],
 	"height": 1024,
@@ -177,6 +202,7 @@
 			"bgColor": 16777215
 		},
 		"historySize": 100,
-		"showCodes": false
+		"showCodes": false,
+		"gridSize": 16
 	}
 }

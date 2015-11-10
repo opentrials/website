@@ -1,0 +1,90 @@
+.page-template-page-home {
+    .banner {
+        header {
+            & + section {
+                @include outer-container;
+
+                & > div {
+                    @include fill-parent();
+                    @include row(table);
+                }
+
+                article {
+                    padding: 0 $base-spacing $base-spacing $base-spacing;
+
+                    a {
+                        color: inherit;
+                        text-decoration: underline;
+                    }
+
+                    @media (min-width: $large-screen) {
+                        @include span-columns(6);
+                        padding-top: $base-spacing;
+                        padding-right: $base-spacing * 2;
+                        vertical-align: middle;
+                    }
+                }
+                .image {
+                    display: none;
+
+                    @media (min-width: $large-screen) {
+                        @include span-columns(6);
+                        padding-left: $base-spacing;
+
+                        & > span {
+                            display: block;
+                            border-radius: 3px 3px 0 0;
+                            overflow: hidden;
+                            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.32);
+                            max-height: 320px;
+                        }
+                    }
+                }
+            }
+        }
+
+        & + .news {
+            background-color: $light-gray;
+            position: relative;
+            margin-bottom: 0;
+            text-align: center;
+            padding: $base-spacing;
+            font-weight: normal;
+            @media (min-width: $large-screen) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    #register {
+        padding-top: $base-spacing;
+        padding-bottom: $base-spacing;
+    }
+
+    .video {
+        display: none;
+        width: 90%;
+        max-width: 1280px;
+    }
+
+    .cta {
+        display: none;
+    }
+}
+
+.js .page-template-page-home {
+    .cta {
+        @extend button;
+        background-color: #fff;
+        color: $blue;
+
+        &:before {
+            content: "\e903";
+            @include icon-font();
+            margin-right: $small-spacing / 2;
+        }
+        @media (min-width: $medium-screen) {
+            font-size: 1.1em;
+        }
+    }
+}

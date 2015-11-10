@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'opentrials';
-	src:url('fonts/opentrials.eot?i9zkah');
-	src:url('fonts/opentrials.eot?i9zkah#iefix') format('embedded-opentype'),
-		url('fonts/opentrials.ttf?i9zkah') format('truetype'),
-		url('fonts/opentrials.woff?i9zkah') format('woff'),
-		url('fonts/opentrials.svg?i9zkah#opentrials') format('svg');
+	src:url('fonts/opentrials.eot?tsul8k');
+	src:url('fonts/opentrials.eot?tsul8k#iefix') format('embedded-opentype'),
+		url('fonts/opentrials.ttf?tsul8k') format('truetype'),
+		url('fonts/opentrials.woff?tsul8k') format('woff'),
+		url('fonts/opentrials.svg?tsul8k#opentrials') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -44,4 +44,7 @@
 }
 .icon-chevron-thin-down:before {
 	content: "\e602";
+}
+.icon-play:before {
+	content: "\e903";
 }
