@@ -7,14 +7,7 @@ get_header(); ?>
 
 <div class="banner">
     <div>
-        <header>
-            <img class="logo" src="<?php echo get_template_directory_uri() ?>/img/opentrials.png" alt="<?php bloginfo( 'name' ); ?>, <?php bloginfo( 'description' ); ?>">
-
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-            </nav>
-        </header>
+        <?php get_template_part('site_header'); ?>
         <section>
             <div>
                 <?php while ( have_posts() ) : the_post(); ?>

@@ -1,83 +1,82 @@
 .page-template-default,
 .single-post {
 
-    article.page,
-    article.post {
-        .entry-header {
-            background-color:$blue;
-            background-image:url(img/bg.jpg);
-            background-repeat:no-repeat;
-            background-position:right top;
-            color:#fff;
-            margin-bottom:30px;
-            padding-top: 20px;
+    .entry-header {
 
-            a {
-                color: #fff;
-                font-weight: 400;
+        a {
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .entry-title,
+        .entry-sub-title,
+        .entry-meta,
+        .breadcrumb {
+            @include outer-container;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .entry-title {
+            font-size:50px;
+            margin-bottom: 0;
+            line-height: 1.1;
+
+            @media (min-width: $medium-screen) {
+                font-size:62px;
+            }
+        }
+        .entry-sub-title {
+            font-size:24px;
+            margin-bottom: 0;
+            font-weight: 200;
+            line-height: 1.1;
+
+            @media (min-width: $medium-screen) {
+                font-size:30px;
+            }
+        }
+        .entry-header-bar {
+            border-top: solid 1px rgba(255,255,255,0.23);
+            font-weight: 200;
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 40px;
+            background-color: rgba($blue,0.8);
+
+            .updated {
+                display: none;
             }
 
-            .entry-title,
-            .entry-sub-title,
-            .entry-meta,
             .breadcrumb {
-                @include outer-container;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
+                li {
+                    display: inline-block;
+                    font-weight: 400;
 
-            .entry-title {
-                font-size:50px;
-                margin-bottom: 0;
-                line-height: 1.1;
+                    a {
+                        font-weight: 200;
 
-                @media (min-width: $medium-screen) {
-                    font-size:62px;
-                }
-            }
-            .entry-sub-title {
-                font-size:24px;
-                margin-bottom: 0;
-                font-weight: 200;
-                line-height: 1.1;
-
-                @media (min-width: $medium-screen) {
-                    font-size:30px;
-                }
-            }
-            .entry-header-bar {
-                border-top: solid 1px rgba(255,255,255,0.23);
-                font-weight: 200;
-                margin-top: 20px;
-                font-size: 15px;
-                line-height: 40px;
-
-                .updated {
-                    display: none;
-                }
-
-                .breadcrumb {
-                    li {
-                        display: inline-block;
-                        font-weight: 400;
-
-                        a {
-                            font-weight: 200;
-
-                            &:after {
-                                content: ' \203A';
-                            }
+                        &:after {
+                            content: ' \203A';
                         }
                     }
                 }
             }
         }
 
+    }
+
+    .page {
+        background-color: $base-background-color;
+
+        @media (min-width: $large-screen) {
+            padding-top: $base-spacing;
+        }
+
         .entry-content,
         .entry-footer {
             @include outer-container;
-            padding-left:20px;
-            padding-right:20px;
+            padding: $base-spacing;
         }
 
         .entry-footer {
@@ -86,7 +85,6 @@
             }
         }
     }
-
     .post-navigation {
         @include outer-container;
         padding-left:20px;

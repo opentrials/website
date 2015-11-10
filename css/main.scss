@@ -35,6 +35,10 @@
             float: left;
             display: block;
             margin-left: $base-spacing;
+
+            img {
+                height: inherit;
+            }
         }
 
         + * {

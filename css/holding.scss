@@ -38,7 +38,7 @@ html {
     font-size: 1em;
     line-height: 1.4;
     overflow-x: hidden;
-    background-color: darken($blue, 7);
+    background-color: $blue;
 }
 
 ::-moz-selection {
