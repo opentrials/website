@@ -1,7 +1,6 @@
 .main-navigation {
-	@media (min-width: $large-screen) {
-		text-align: right;
-	}
+	text-align: right;
+	margin-right: $small-spacing;
 
   .menu-main-menu-container {
     clear:both;
@@ -130,7 +129,7 @@
 
 
 .main-navigation.toggled {
-
+  
   .menu-toggle span {
     background-color: transparent;
   }
@@ -144,7 +143,7 @@
   [class*="menu-container"] {
 	  position: absolute;
 	  top: $base-spacing + em(30) + $small-spacing;
-	  right: 0;
+	  right: $small-spacing;
   }
   ul {
 
@@ -152,6 +151,7 @@
 
     li {
       float:none;
+	  display: block;
 
       a {
         border-radius:0;
