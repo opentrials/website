@@ -63,20 +63,21 @@
 	a {
 		display: block;
 		text-decoration: none;
-	    color: $dark-gray;
+	    color: #fff;
 	    font-weight:normal;
-	    padding:10px 16px;
+	    padding:6px 16px;
 	    border-radius:22px;
-
-		@media (min-width: $large-screen) {
-			color: #fff;
-		}
+		margin: 2px;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-    	background-color:$blue;
+		margin: 0;
+		border: solid 2px #fff;
+		@media (min-width: $large-screen) {
+	    	background-color:rgba($blue, 0.7);
+		}
 	}
 }
 
@@ -140,6 +141,11 @@
     transform: rotate(-45deg) translate(7px, -8px);
   }
 
+  .menu-main-menu-container {
+	  position: absolute;
+	  top: $base-spacing + em(30) + $small-spacing;
+	  right: 0;
+  }
   ul {
 
     background-color:#fff;
@@ -149,6 +155,7 @@
 
       a {
         border-radius:0;
+		color: $dark-gray;
       }
     }
   }

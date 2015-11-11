@@ -1474,17 +1474,21 @@ ul.long {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: normal;
-  padding: 10px 16px;
-  border-radius: 22px; }
-  @media (min-width: 53.75em) {
-    .main-navigation a {
-      color: #fff; } }
+  padding: 6px 16px;
+  border-radius: 22px;
+  margin: 2px; }
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
-  background-color: #0494bd; }
+  margin: 0;
+  border: solid 2px #fff; }
+  @media (min-width: 53.75em) {
+    .main-navigation .current_page_item > a,
+    .main-navigation .current-menu-item > a,
+    .main-navigation .current_page_ancestor > a {
+      background-color: rgba(4, 148, 189, 0.7); } }
 
 /* Small menu. */
 .menu-toggle,
@@ -1532,12 +1536,17 @@ ul.long {
   transform: rotate(45deg) translate(5px, 5px); }
 .main-navigation.toggled .menu-toggle span:after {
   transform: rotate(-45deg) translate(7px, -8px); }
+.main-navigation.toggled .menu-main-menu-container {
+  position: absolute;
+  top: 4.125em;
+  right: 0; }
 .main-navigation.toggled ul {
   background-color: #fff; }
   .main-navigation.toggled ul li {
     float: none; }
     .main-navigation.toggled ul li a {
-      border-radius: 0; }
+      border-radius: 0;
+      color: #333; }
 
 @media screen and (min-width: 850px) {
   .menu-toggle {
