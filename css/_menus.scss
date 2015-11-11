@@ -141,7 +141,7 @@
     transform: rotate(-45deg) translate(7px, -8px);
   }
 
-  .menu-main-menu-container {
+  [class*="menu-container"] {
 	  position: absolute;
 	  top: $base-spacing + em(30) + $small-spacing;
 	  right: 0;

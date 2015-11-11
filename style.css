@@ -1536,7 +1536,7 @@ ul.long {
   transform: rotate(45deg) translate(5px, 5px); }
 .main-navigation.toggled .menu-toggle span:after {
   transform: rotate(-45deg) translate(7px, -8px); }
-.main-navigation.toggled .menu-main-menu-container {
+.main-navigation.toggled [class*="menu-container"] {
   position: absolute;
   top: 4.125em;
   right: 0; }
