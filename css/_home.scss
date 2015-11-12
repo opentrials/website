@@ -39,6 +39,7 @@
                             max-height: 320px;
                         }
                     }
+                    @include reset-display;
                 }
             }
         }
