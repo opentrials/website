@@ -496,7 +496,7 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  #contribute section ul.long, ul.list {
+  #contribute section ul.long, ul.list, .page-template-page-contribute article > section ul {
     list-style-type: disc;
     margin-bottom: 0.75em;
     padding-left: 1.5em; }
@@ -1683,6 +1683,65 @@ ul.long {
   @media (min-width: 40em) {
     .js .page-template-page-home .cta {
       font-size: 1.1em; } }
+
+.page-template-page-contribute article > div, .page-template-page-contribute article > section, .page-template-page-contribute article > form {
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em; }
+  .page-template-page-contribute article > div::after, .page-template-page-contribute article > section::after, .page-template-page-contribute article > form::after {
+    clear: both;
+    content: "";
+    display: table; }
+.page-template-page-contribute article > section {
+  border-bottom: 1px solid #F5F5F5;
+  border-color: rgba(153, 153, 153, 0.2);
+  margin-bottom: 1.5em;
+  padding-bottom: 3em; }
+  .page-template-page-contribute article > section > a {
+    display: inline-block;
+    height: 40px;
+    line-height: 42px;
+    padding: 0 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0494bd;
+    border: solid 5px #0494bd;
+    background-color: #fff;
+    box-sizing: content-box; }
+    .page-template-page-contribute article > section > a:hover {
+      background-color: #0494bd;
+      color: #fff; }
+.page-template-page-contribute article > form {
+  padding-bottom: 3em; }
+  .page-template-page-contribute article > form legend {
+    margin-bottom: 20px; }
+  .page-template-page-contribute article > form .input-group {
+    text-align: left;
+    margin-bottom: 0.75em; }
+    .page-template-page-contribute article > form .input-group ul {
+      padding: 0;
+      margin-top: 10px; }
+      .page-template-page-contribute article > form .input-group ul li {
+        display: table;
+        white-space: nowrap; }
+        @media (min-width: 40em) {
+          .page-template-page-contribute article > form .input-group ul li {
+            float: left; } }
+        .page-template-page-contribute article > form .input-group ul li input {
+          display: table-cell;
+          vertical-align: middle; }
+        .page-template-page-contribute article > form .input-group ul li label {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 2px; }
+  @media (min-width: 40em) {
+    .page-template-page-contribute article > form .field-group {
+      float: left;
+      width: 48%; }
+      .page-template-page-contribute article > form .field-group:nth-of-type(even) {
+        float: right; } }
 
 body.page .entry-header a,
 body.single-post .entry-header a {

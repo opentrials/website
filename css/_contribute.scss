@@ -1,0 +1,78 @@
+.page-template-page-contribute {
+    article {
+
+        & > div,
+        & > section,
+        & > form {
+            @include outer-container;
+            padding: $base-spacing;
+        }
+
+        & > section {
+            border-bottom: $base-border;
+            border-color: rgba($medium-gray, 0.2);
+            margin-bottom: $base-spacing;
+            padding-bottom: $base-spacing * 2;
+
+            ul  {
+                @extend %default-ul;
+            }
+
+            & > a {
+                @include btn;
+            }
+        }
+
+        & > form {
+            padding-bottom: $base-spacing * 2;
+            
+            legend {
+                margin-bottom:20px;
+            }
+
+            .input-group {
+                text-align: left;
+                margin-bottom: $small-spacing;
+
+                ul {
+                    padding:0;
+                    margin-top:10px;
+
+                    li {
+                        display: table;
+                        white-space:nowrap;
+
+                        @media (min-width: $medium-screen) {
+                            float: left;
+                        }
+
+
+                        input {
+                            display:table-cell;
+                            vertical-align: middle;
+                        }
+
+
+                        label {
+                            display:table-cell;
+                            vertical-align: middle;
+                            padding-left: 2px;
+                        }
+                    }
+                }
+            }
+
+
+            @media (min-width: $medium-screen) {
+                .field-group {
+                      float:left;
+                      width:48%;
+
+                      &:nth-of-type(even) {
+                        float:right;
+                      }
+                }
+            }
+        }
+    }
+}
