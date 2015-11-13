@@ -36,7 +36,9 @@ get_header(); ?>
             <li><a href="#<?php echo $post->post_name ?>"><?php the_title(); ?></a></li>
             <?php endwhile; ?>
         </ul>
+        <?php endif; wp_reset_query(); ?>
     </div>
+    <?php  if ( $parent->have_posts() ) : ?>
     <?php while ( $parent->have_posts() ) : $parent->the_post();
     $subtitle = get_field( "sub-title" ); ?>
     <section>
