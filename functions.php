@@ -140,6 +140,10 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Custom fields.
+ */
+require get_template_directory() . '/inc/custom-fields.php';
 
 /**
  * Remove the admin toolbar.
