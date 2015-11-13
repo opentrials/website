@@ -1,0 +1,10 @@
+body.blog {
+
+    article {
+        .entry-header {
+            @include outer-container;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

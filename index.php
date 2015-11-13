@@ -13,34 +13,53 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="banner">
+	    <div>
+	        <?php get_template_part('site_header'); ?>
+			<div class="entry-header">
+			    <h1 class="entry-title">Blog</h1>
+			    <!--<p class="entry-sub-title"></p>-->
+			    <div class="entry-header-bar">
+			        <ul class="breadcrumb">
+			            <li>
+			                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+			            </li>
+			            <li>
+			                Blog
+			            </li>
+			        </ul>
+			    </div>
+			</div><!-- .entry-header -->
+	    </div>
+	</div>
 
-		<?php if ( have_posts() ) : ?>
+	<main id="main" class="site-main" role="main">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+			<?php
+				/* Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'content', get_post_format() );
+			?>
 
-			<?php the_posts_navigation(); ?>
+		<?php endwhile; ?>
 
-		<?php else : ?>
+		<?php the_posts_navigation(); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+	<?php else : ?>
 
-		<?php endif; ?>
+		<?php get_template_part( 'content', 'none' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+	</main><!-- #main -->
+
+
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
