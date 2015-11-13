@@ -1812,29 +1812,43 @@ body.single-post .entry-header .entry-header-bar {
       body.single-post .entry-header .entry-header-bar .breadcrumb li a:after {
         content: ' \203A'; }
 body.page .page,
-body.single-post .page {
+body.page .post,
+body.single-post .page,
+body.single-post .post {
   background-color: #fff; }
   @media (min-width: 53.75em) {
     body.page .page,
-    body.single-post .page {
+    body.page .post,
+    body.single-post .page,
+    body.single-post .post {
       padding-top: 1.5em; } }
   body.page .page .entry-content,
   body.page .page .entry-footer,
+  body.page .post .entry-content,
+  body.page .post .entry-footer,
   body.single-post .page .entry-content,
-  body.single-post .page .entry-footer {
+  body.single-post .page .entry-footer,
+  body.single-post .post .entry-content,
+  body.single-post .post .entry-footer {
     max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em; }
     body.page .page .entry-content::after,
     body.page .page .entry-footer::after,
+    body.page .post .entry-content::after,
+    body.page .post .entry-footer::after,
     body.single-post .page .entry-content::after,
-    body.single-post .page .entry-footer::after {
+    body.single-post .page .entry-footer::after,
+    body.single-post .post .entry-content::after,
+    body.single-post .post .entry-footer::after {
       clear: both;
       content: "";
       display: table; }
   body.page .page .entry-footer .cat-links,
-  body.single-post .page .entry-footer .cat-links {
+  body.page .post .entry-footer .cat-links,
+  body.single-post .page .entry-footer .cat-links,
+  body.single-post .post .entry-footer .cat-links {
     display: none; }
 body.page .post-navigation,
 body.single-post .post-navigation {
@@ -1856,8 +1870,7 @@ body.single-post .post-navigation {
     padding: 0.75em 1.5em; }
 body.page .comments-area,
 body.single-post .comments-area {
-  background-color: #F5F5F5;
-  margin-top: 1.5em; }
+  background-color: #F5F5F5; }
   body.page .comments-area > *,
   body.single-post .comments-area > * {
     max-width: 68rem;

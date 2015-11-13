@@ -66,7 +66,8 @@ body.single-post {
 
     }
 
-    .page {
+    .page,
+    .post {
         background-color: $base-background-color;
 
         @media (min-width: $large-screen) {
@@ -103,7 +104,6 @@ body.single-post {
 
     .comments-area {
         background-color: $light-gray;
-        margin-top: $base-spacing;
 
         & > * {
             @include outer-container;
