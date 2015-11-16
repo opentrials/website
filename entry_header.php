@@ -10,6 +10,11 @@
             <li>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
             </li>
+            <?php if ( is_single() && get_option( 'show_on_front' ) == 'page' ) : ?>
+            <li>
+                <a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>"><?php echo get_the_title( get_option('page_for_posts' ) ); ?></a>
+            </li>
+            <?php endif ?>
             <li>
                 <?php the_title(); ?>
             </li>
