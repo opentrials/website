@@ -40,13 +40,22 @@ get_header(); ?>
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-			?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
+					<?php if ( 'post' == get_post_type() ) : ?>
+					<div class="entry-meta">
+						<?php open_trials_posted_on(); ?>
+					</div><!-- .entry-meta -->
+					<?php endif; ?>
+				</header><!-- .entry-header -->
+				<div class="entry-content">
+					<?php the_excerpt(); ?>
+					<a href="<?php echo get_permalink(); ?>">Read More</a>
+				</div><!-- .entry-content -->
+
+			</article><!-- #post-## -->
 
 		<?php endwhile; ?>
 

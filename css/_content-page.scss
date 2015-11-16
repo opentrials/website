@@ -1,6 +1,7 @@
 body.page,
 body.single-post,
-body.blog {
+body.blog,
+body.archive {
 
     .banner {
 
@@ -78,10 +79,19 @@ body.blog {
             padding-top: $base-spacing;
         }
 
+        .entry-header,
         .entry-content,
         .entry-footer {
             @include outer-container;
             padding: $base-spacing 20px;
+        }
+
+        .entry-header {
+            padding-bottom: 0;
+
+            h1 {
+                margin-bottom: $small-spacing / 8;
+            }
         }
 
         .entry-footer {
