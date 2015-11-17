@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //new slider
-    $('.page-template-page-holding .news').slick({
+    jQuery('.page-template-page-holding .news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -8,7 +8,7 @@ $(document).ready(function() {
         arrows : false,
         dots: true,
     });
-    $('.page-template-page-home .news').slick({
+    jQuery('.page-template-page-home .news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -16,14 +16,14 @@ $(document).ready(function() {
     });
 
     //pop
-    $('#signup-button').bind('click', function(e) {
+    jQuery('#signup-button').bind('click', function(e) {
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
         $('#signup-form').bPopup({
         });
     });
-    $('.page-template-page-home .cta').bind('click', function(e) {
+    jQuery('.page-template-page-home .cta').bind('click', function(e) {
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
