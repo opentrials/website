@@ -886,86 +886,86 @@ mark {
     color: #12b2e3; }
 
 @media (min-width: 40em) {
-  .page-template-page-holding {
+  .page-template-page-holding-php {
     text-align: center; } }
-.page-template-page-holding .intro {
+.page-template-page-holding-php .intro {
   background-color: #0494bd;
   background-image: url(img/bg.jpg);
   background-repeat: no-repeat;
   background-position: top right;
   color: #fff; }
-  .page-template-page-holding .intro a {
+  .page-template-page-holding-php .intro a {
     color: inherit; }
-  .page-template-page-holding .intro > div:not(.news) {
+  .page-template-page-holding-php .intro > div:not(.news) {
     max-width: 68rem;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1.5em; }
-    .page-template-page-holding .intro > div:not(.news)::after {
+    .page-template-page-holding-php .intro > div:not(.news)::after {
       clear: both;
       content: "";
       display: table; }
     @media (min-width: 40em) and (min-height: 600px) {
-      .page-template-page-holding .intro > div:not(.news) {
+      .page-template-page-holding-php .intro > div:not(.news) {
         padding-top: 50px; } }
-    .page-template-page-holding .intro > div:not(.news) > div {
+    .page-template-page-holding-php .intro > div:not(.news) > div {
       clear: left; }
-      .page-template-page-holding .intro > div:not(.news) > div > div {
+      .page-template-page-holding-php .intro > div:not(.news) > div > div {
         text-align: left; }
         @media (min-width: 40em) {
-          .page-template-page-holding .intro > div:not(.news) > div > div {
+          .page-template-page-holding-php .intro > div:not(.news) > div > div {
             float: left;
             display: block;
             margin-right: 2.35765%;
             width: 48.82117%; }
-            .page-template-page-holding .intro > div:not(.news) > div > div:last-child {
+            .page-template-page-holding-php .intro > div:not(.news) > div > div:last-child {
               margin-right: 0; } }
-      .page-template-page-holding .intro > div:not(.news) > div.logo {
+      .page-template-page-holding-php .intro > div:not(.news) > div.logo {
         margin-bottom: 20px; }
-        .page-template-page-holding .intro > div:not(.news) > div.logo img {
+        .page-template-page-holding-php .intro > div:not(.news) > div.logo img {
           height: 120px;
           display: none; }
           @media (min-width: 40em) {
-            .page-template-page-holding .intro > div:not(.news) > div.logo img {
+            .page-template-page-holding-php .intro > div:not(.news) > div.logo img {
               display: inline; } }
-        .page-template-page-holding .intro > div:not(.news) > div.logo h1 {
+        .page-template-page-holding-php .intro > div:not(.news) > div.logo h1 {
           margin: 0; }
           @media (min-width: 40em) {
-            .page-template-page-holding .intro > div:not(.news) > div.logo h1 {
+            .page-template-page-holding-php .intro > div:not(.news) > div.logo h1 {
               font-size: 58px; } }
-        .page-template-page-holding .intro > div:not(.news) > div.logo .tagline {
+        .page-template-page-holding-php .intro > div:not(.news) > div.logo .tagline {
           font-size: 24px; }
-        .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal {
+        .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal {
           text-align: left;
           padding-left: 1.5em;
           padding-right: 1.5em; }
-          .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal img {
+          .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal img {
             float: left;
             margin-right: 10px;
             height: 100px; }
-          .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal h1 {
+          .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal h1 {
             font-size: 41px; }
             @media (min-width: 40em) {
-              .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal h1 {
+              .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal h1 {
                 padding-top: 11px;
                 text-indent: 6px; } }
-          .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal .tagline {
+          .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal .tagline {
             font-size: 19px; }
             @media (min-width: 40em) {
-              .page-template-page-holding .intro > div:not(.news) > div.logo.horizontal .tagline {
+              .page-template-page-holding-php .intro > div:not(.news) > div.logo.horizontal .tagline {
                 display: block;
                 text-indent: 8px;
                 margin-top: -1px; } }
-      .page-template-page-holding .intro > div:not(.news) > div.content > div {
+      .page-template-page-holding-php .intro > div:not(.news) > div.content > div {
         padding: 1.5em; }
-        .page-template-page-holding .intro > div:not(.news) > div.content > div.video {
+        .page-template-page-holding-php .intro > div:not(.news) > div.content > div.video {
           display: none; }
           @media (min-width: 40em) {
-            .page-template-page-holding .intro > div:not(.news) > div.content > div.video {
+            .page-template-page-holding-php .intro > div:not(.news) > div.content > div.video {
               display: block; } }
-      .page-template-page-holding .intro > div:not(.news) > div .cta {
+      .page-template-page-holding-php .intro > div:not(.news) > div .cta {
         padding-top: 0.375em; }
-        .page-template-page-holding .intro > div:not(.news) > div .cta a {
+        .page-template-page-holding-php .intro > div:not(.news) > div .cta a {
           display: inline-block;
           height: 40px;
           line-height: 42px;
@@ -980,12 +980,12 @@ mark {
           margin-top: 10px;
           background-color: #fff;
           color: #0494bd; }
-          .page-template-page-holding .intro > div:not(.news) > div .cta a:hover {
+          .page-template-page-holding-php .intro > div:not(.news) > div .cta a:hover {
             background-color: #fff;
             color: #0494bd; }
-  .page-template-page-holding .intro p a {
+  .page-template-page-holding-php .intro p a {
     border-bottom: dotted 1px #fff; }
-  .page-template-page-holding .intro .down {
+  .page-template-page-holding-php .intro .down {
     position: absolute;
     font-family: 'opentrials';
     speak: none;
@@ -1003,10 +1003,10 @@ mark {
     margin-left: -40px;
     font-size: 30px;
     display: none; }
-    .page-template-page-holding .intro .down:before {
+    .page-template-page-holding-php .intro .down:before {
       content: "\e602"; }
     @media (min-width: 40em) and (min-height: 600px) {
-      .page-template-page-holding .intro .down {
+      .page-template-page-holding-php .intro .down {
         display: block; } }
 
 body > section {

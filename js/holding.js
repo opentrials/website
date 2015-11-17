@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //new slider
-    jQuery('.page-template-page-holding .news').slick({
+    jQuery('.page-template-page-holding-php .news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
