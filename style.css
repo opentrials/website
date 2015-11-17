@@ -1128,6 +1128,9 @@ body > section {
         #register article > a h3 {
           margin-top: -4px; } }
 
+#signup-form {
+  background-color: #fff; }
+
 .js #signup-form {
   display: none;
   padding: 1.5em;
