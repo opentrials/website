@@ -2055,4 +2055,16 @@ body.blog article .entry-header {
 time.updated {
   display: none; }
 
+.faq .ui-accordion-header {
+  color: #0494bd;
+  padding-left: 0;
+  font-size: 1.25em;
+  font-weight: bold; }
+  .faq .ui-accordion-header .ui-icon {
+    display: none; }
+  .faq .ui-accordion-header.ui-state-active {
+    color: #333; }
+.faq .ui-accordion-content {
+  padding-left: 0; }
+
 /*# sourceMappingURL=style.css.map */

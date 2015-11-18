@@ -1,0 +1,21 @@
+.faq {
+    .ui-accordion-header {
+        color: $blue;
+        padding-left: 0;
+        font-size: em(20);
+        font-weight: bold;
+
+        .ui-icon {
+            display: none;
+
+        }
+
+        &.ui-state-active {
+            color: $base-font-color;
+        }
+    }
+
+    .ui-accordion-content {
+        padding-left: 0;
+    }
+}
