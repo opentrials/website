@@ -1,6 +1,6 @@
-$(document).ready(function() {
+jQuery(document).ready(function ($) {
     //new slider
-    jQuery('.page-template-page-holding-php .news').slick({
+    $('.page-template-page-holding-php .news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -8,7 +8,7 @@ $(document).ready(function() {
         arrows : false,
         dots: true,
     });
-    jQuery('.page-template-page-home .news').slick({
+    $('.page-template-page-home .news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -16,14 +16,14 @@ $(document).ready(function() {
     });
 
     //pop
-    jQuery('#signup-button').bind('click', function(e) {
+    $('#signup-button').bind('click', function(e) {
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
         $('#signup-form').bPopup({
         });
     });
-    jQuery('.page-template-page-home .cta').bind('click', function(e) {
+    $('.page-template-page-home .cta').bind('click', function(e) {
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
