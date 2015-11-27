@@ -34,8 +34,8 @@ get_header(); ?>
 </div>
 
 <div class="news">
-    <a href="#contribute">We are looking for: <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong>, <strong>individual partners</strong> &amp; <strong>users</strong>.</a>
-    <a href="#board">We are delighted to present the <strong>Open Trials advisory board</strong>.</a>
+    <a href="contribute">We are looking for: <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong>, <strong>individual partners</strong> &amp; <strong>users</strong>.</a>
+    <a href="advisory-board">We are delighted to present the <strong>Open Trials advisory board</strong>.</a>
 </div>
 
 <div class="video">
