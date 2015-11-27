@@ -141,6 +141,12 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Plugin activation.
+ */
+require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require get_template_directory() . '/inc/tgm.php';
+
+/**
  * Custom fields.
  */
 require get_template_directory() . '/inc/custom-fields.php';
