@@ -34,8 +34,25 @@ get_header(); ?>
 </div>
 
 <div class="news">
-    <a href="contribute">We are looking for: <strong>data partners</strong>, <strong>funding partners</strong>, <strong>community partners</strong>, <strong>individual partners</strong> &amp; <strong>users</strong>.</a>
-    <a href="advisory-board">We are delighted to present the <strong>Open Trials advisory board</strong>.</a>
+    <?php
+    $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => -1,
+        'post_parent'    => $post->ID,
+        'order'          => 'ASC',
+        'orderby'        => 'menu_order'
+     );
+
+    $parent = new WP_Query( $args );
+
+    if ( $parent->have_posts() ) {
+        while ( $parent->have_posts() ) : $parent->the_post(); ?>
+        <div>
+            <?php echo get_the_content(); ?>
+        </div>
+    <?php endwhile;
+    }
+    wp_reset_query(); ?>
 </div>
 
 <div class="video">
