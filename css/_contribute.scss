@@ -1,6 +1,11 @@
 .page-template-page-contribute {
     article {
 
+        ul.inline {
+            padding: 0;
+            margin: 0;
+        }
+
         & > div,
         & > section,
         & > form {
@@ -25,7 +30,7 @@
 
         & > form {
             padding-bottom: $base-spacing * 2;
-            
+
             legend {
                 margin-bottom:20px;
             }

@@ -1712,6 +1712,9 @@ ul.long {
     .js .page-template-page-home .cta {
       font-size: 1.1em; } }
 
+.page-template-page-contribute article ul.inline {
+  padding: 0;
+  margin: 0; }
 .page-template-page-contribute article > div, .page-template-page-contribute article > section, .page-template-page-contribute article > form {
   max-width: 68rem;
   margin-left: auto;
