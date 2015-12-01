@@ -899,9 +899,9 @@ mark {
   font-size: 14px;
   font-weight: bold; }
   .news a {
-    display: block;
     color: inherit; }
-  .news strong {
+  .news strong,
+  .news span {
     color: #12b2e3; }
 
 @media (min-width: 40em) {

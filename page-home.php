@@ -53,7 +53,28 @@ get_header(); ?>
     <?php endwhile;
     }
     wp_reset_query(); ?>
+
+<?php
+  $number_of_tweets = 3;
+  $twitter_screenname_to_load = 'opentrials';
+
+  $tweets = getTweets($number_of_tweets, $twitter_screenname_to_load);
+
+  foreach($tweets as $tweet){ ?>
+      <div class="tweet">
+          <?php //var_dump($tweet);
+          $tweet_text = $tweet["text"];
+          $tweet_text = preg_replace('/http:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<span><a href="http://$1" target="_blank">http://$1</a></span>', $tweet_text); //replace http
+          $tweet_text = preg_replace('/https:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<span><a href="https://$1" target="_blank">https://$1</a></span>', $tweet_text); //replace https
+          $tweet_text = preg_replace('/@([a-z0-9_]+)/i', '<strong><a href="https://twitter.com/$1" target="_blank">@$1</a></strong>', $tweet_text); //replace users
+          $tweet_text = preg_replace('/#([a-z0-9_]+)/i', '<strong><a href="https://twitter.com/hashtag/$1" target="_blank">#$1</a></strong>', $tweet_text); //replace hashtags
+          echo $tweet_text;
+          ?>
+      </div>
+  <?php }
+?>
 </div>
+<?php //var_dump($tweets); ?>
 
 <div class="video">
     <div class="videoWrapper">

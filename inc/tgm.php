@@ -29,6 +29,11 @@ function my_theme_register_required_plugins() {
 			'is_callable' => 'acf',
 		),
 
+		array(
+			'name'      => 'oAuth Twitter Feed for Developers',
+			'slug'      => 'oauth-twitter-feed-for-developers',
+		),
+
 	);
 
 	/*

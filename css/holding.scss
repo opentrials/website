@@ -132,11 +132,11 @@ mark {
     font-weight: bold;
 
     a {
-        display: block;
         color: inherit;
     }
 
-    strong {
+    strong,
+    span {
         color: $action-color;
     }
 }
