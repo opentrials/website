@@ -500,10 +500,29 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  #contribute section ul.long, ul.list, .page-template-page-contribute article > section ul {
+  #contribute section ul.long, ul.list, .page-template-page-contribute article > section ul, body.page .page ul,
+  body.page .post ul,
+  body.single-post .page ul,
+  body.single-post .post ul,
+  body.blog .page ul,
+  body.blog .post ul,
+  body.archive .page ul,
+  body.archive .post ul {
     list-style-type: disc;
     margin-bottom: 0.75em;
     padding-left: 1.5em; }
+  body.page .page ol,
+  body.page .post ol,
+  body.single-post .page ol,
+  body.single-post .post ol,
+  body.blog .page ol,
+  body.blog .post ol,
+  body.archive .page ol,
+  body.archive .post ol {
+    list-style-type: decimal;
+    margin-bottom: 0.75em;
+    padding-left: 1.5em; }
+
 dl {
   margin-bottom: 0.75em; }
   dl dt {

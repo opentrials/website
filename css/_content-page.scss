@@ -99,6 +99,13 @@ body.archive {
                 display: none;
             }
         }
+
+        ul {
+            @extend %default-ul
+        }
+        ol {
+            @extend %default-ol;
+        }
     }
     .post-navigation {
         @include outer-container;
