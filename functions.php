@@ -155,3 +155,11 @@ require get_template_directory() . '/inc/custom-fields.php';
  * Remove the admin toolbar.
  */
 add_filter('show_admin_bar', '__return_false');
+
+/**
+ * Video wrapper.
+ */
+add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
+function my_embed_oembed_html($html, $url, $attr, $post_id) {
+  return '<div class="videoWrapper">' . $html . '</div>';
+}
