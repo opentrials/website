@@ -55,6 +55,10 @@ get_header(); ?>
     wp_reset_query(); ?>
 
 <?php
+    // check for twitter plugin
+    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    if ( is_plugin_active( 'oauth-twitter-feed-for-developers/twitter-feed-for-developers.php' ) ) {
+
   $number_of_tweets = 3;
   $twitter_screenname_to_load = 'opentrials';
 
@@ -71,7 +75,9 @@ get_header(); ?>
           echo $tweet_text;
           ?>
       </div>
-  <?php }
+  <?php
+    }
+  }
 ?>
 </div>
 <?php //var_dump($tweets); ?>
