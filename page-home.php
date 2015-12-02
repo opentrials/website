@@ -64,7 +64,8 @@ get_header(); ?>
 
   $tweets = getTweets($number_of_tweets, $twitter_screenname_to_load);
 
-  foreach($tweets as $tweet){ ?>
+  foreach($tweets as $tweet){
+      if (isset($tweet["text"])) { ?>
       <div class="tweet">
           <?php //var_dump($tweet);
           $tweet_text = $tweet["text"];
@@ -76,6 +77,7 @@ get_header(); ?>
           ?>
       </div>
   <?php
+      }
     }
   }
 ?>
