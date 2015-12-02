@@ -94,15 +94,16 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-a {
+a, .faq .ui-accordion-content a {
   background-color: transparent; }
 
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
-a:active,
-a:hover {
+a:active, .faq .ui-accordion-content a:active,
+a:hover,
+.faq .ui-accordion-content a:hover {
   outline: 0; }
 
 /* Text-level semantics
@@ -220,7 +221,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
 input,
 optgroup,
 select,
@@ -235,7 +236,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a {
+button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a {
   overflow: visible; }
 
 /**
@@ -244,7 +245,7 @@ button, .js .page-template-page-home .cta, body.blog article .entry-content > a 
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
 select {
   text-transform: none; }
 
@@ -255,7 +256,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -267,14 +268,14 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], .js .page-template-page-home [disabled].cta, body.blog article .entry-content > a[disabled],
+button[disabled], .js .page-template-page-home [disabled].cta, body.blog article .entry-content > a[disabled], body.blog article .faq .ui-accordion-content .entry-content > a[disabled],
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, .js .page-template-page-home .cta::-moz-focus-inner, body.blog article .entry-content > a::-moz-focus-inner,
+button::-moz-focus-inner, .js .page-template-page-home .cta::-moz-focus-inner, body.blog article .entry-content > a::-moz-focus-inner, body.blog article .faq .ui-accordion-content .entry-content > a::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -385,7 +386,8 @@ html {
 input[type="button"], input[type="reset"], input[type="submit"],
 button,
 .js .page-template-page-home .cta,
-body.blog article .entry-content > a {
+body.blog article .entry-content > a,
+body.blog article .faq .ui-accordion-content .entry-content > a {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -411,15 +413,18 @@ body.blog article .entry-content > a {
   button:hover,
   .js .page-template-page-home .cta:hover,
   body.blog article .entry-content > a:hover,
+  body.blog article .faq .ui-accordion-content .entry-content > a:hover,
   button:focus,
   .js .page-template-page-home .cta:focus,
-  body.blog article .entry-content > a:focus {
+  body.blog article .entry-content > a:focus,
+  body.blog article .faq .ui-accordion-content .entry-content > a:focus {
     background-color: #0c7a9c;
     color: #fff; }
   input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   button:disabled,
   .js .page-template-page-home .cta:disabled,
-  body.blog article .entry-content > a:disabled {
+  body.blog article .entry-content > a:disabled,
+  body.blog article .faq .ui-accordion-content .entry-content > a:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
 
@@ -608,13 +613,13 @@ h3 {
 p {
   margin: 0 0 0.75em; }
 
-a {
+a, .faq .ui-accordion-content a {
   color: #12b2e3;
   text-decoration: none;
   transition: color 0.1s linear; }
-  a:active, a:focus, a:hover {
+  a:active, .faq .ui-accordion-content a:active, a:focus, .faq .ui-accordion-content a:focus, a:hover, .faq .ui-accordion-content a:hover {
     color: #0c7a9c; }
-  a:active, a:focus {
+  a:active, .faq .ui-accordion-content a:active, a:focus, .faq .ui-accordion-content a:focus {
     outline: none; }
 
 hr {
@@ -763,7 +768,7 @@ picture {
     margin: 0 5px;
     padding: 0;
     cursor: pointer; }
-    .slick-dots li button, .slick-dots li .js .page-template-page-home .cta, .js .page-template-page-home .slick-dots li .cta, .slick-dots li body.blog article .entry-content > a, body.blog article .slick-dots li .entry-content > a {
+    .slick-dots li button, .slick-dots li .js .page-template-page-home .cta, .js .page-template-page-home .slick-dots li .cta, .slick-dots li body.blog article .entry-content > a, body.blog article .slick-dots li .entry-content > a, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a {
       border: 0;
       background: transparent;
       display: block;
@@ -775,11 +780,11 @@ picture {
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      .slick-dots li button:hover, .slick-dots li .js .page-template-page-home .cta:hover, .js .page-template-page-home .slick-dots li .cta:hover, .slick-dots li body.blog article .entry-content > a:hover, body.blog article .slick-dots li .entry-content > a:hover, .slick-dots li button:focus, .slick-dots li .js .page-template-page-home .cta:focus, .js .page-template-page-home .slick-dots li .cta:focus, .slick-dots li body.blog article .entry-content > a:focus, body.blog article .slick-dots li .entry-content > a:focus {
+      .slick-dots li button:hover, .slick-dots li .js .page-template-page-home .cta:hover, .js .page-template-page-home .slick-dots li .cta:hover, .slick-dots li body.blog article .entry-content > a:hover, body.blog article .slick-dots li .entry-content > a:hover, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:hover, .slick-dots li button:focus, .slick-dots li .js .page-template-page-home .cta:focus, .js .page-template-page-home .slick-dots li .cta:focus, .slick-dots li body.blog article .entry-content > a:focus, body.blog article .slick-dots li .entry-content > a:focus, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:focus {
         outline: none; }
-        .slick-dots li button:hover:before, .slick-dots li .js .page-template-page-home .cta:hover:before, .js .page-template-page-home .slick-dots li .cta:hover:before, .slick-dots li body.blog article .entry-content > a:hover:before, body.blog article .slick-dots li .entry-content > a:hover:before, .slick-dots li button:focus:before, .slick-dots li .js .page-template-page-home .cta:focus:before, .js .page-template-page-home .slick-dots li .cta:focus:before, .slick-dots li body.blog article .entry-content > a:focus:before, body.blog article .slick-dots li .entry-content > a:focus:before {
+        .slick-dots li button:hover:before, .slick-dots li .js .page-template-page-home .cta:hover:before, .js .page-template-page-home .slick-dots li .cta:hover:before, .slick-dots li body.blog article .entry-content > a:hover:before, body.blog article .slick-dots li .entry-content > a:hover:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:hover:before, .slick-dots li button:focus:before, .slick-dots li .js .page-template-page-home .cta:focus:before, .js .page-template-page-home .slick-dots li .cta:focus:before, .slick-dots li body.blog article .entry-content > a:focus:before, body.blog article .slick-dots li .entry-content > a:focus:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:focus:before {
           opacity: 1; }
-      .slick-dots li button:before, .slick-dots li .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li .cta:before, .slick-dots li body.blog article .entry-content > a:before, body.blog article .slick-dots li .entry-content > a:before {
+      .slick-dots li button:before, .slick-dots li .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li .cta:before, .slick-dots li body.blog article .entry-content > a:before, body.blog article .slick-dots li .entry-content > a:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:before {
         position: absolute;
         top: 0;
         left: 0;
@@ -794,7 +799,7 @@ picture {
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-    .slick-dots li.slick-active button:before, .slick-dots li.slick-active .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li.slick-active .cta:before, .slick-dots li.slick-active body.blog article .entry-content > a:before, body.blog article .slick-dots li.slick-active .entry-content > a:before {
+    .slick-dots li.slick-active button:before, .slick-dots li.slick-active .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li.slick-active .cta:before, .slick-dots li.slick-active body.blog article .entry-content > a:before, body.blog article .slick-dots li.slick-active .entry-content > a:before, .slick-dots li.slick-active body.blog article .faq .ui-accordion-content .entry-content > a:before {
       color: white;
       opacity: 0.75; }
 
@@ -898,7 +903,7 @@ mark {
   padding: 0.75em 1.5em;
   font-size: 14px;
   font-weight: bold; }
-  .news a {
+  .news a, .news .faq .ui-accordion-content a, .faq .ui-accordion-content .news a {
     color: inherit; }
   .news strong,
   .news span {
@@ -1119,12 +1124,12 @@ body > section {
       padding-top: 0.75em; }
       #register article:last-child {
         margin-right: 0; }
-      #register article > a {
+      #register article > a, #register .faq .ui-accordion-content article > a {
         display: table-cell;
         width: 33.33333%;
         border-right: solid 1px #F5F5F5;
         padding: 0.75em; }
-        #register article > a:before {
+        #register article > a:before, #register .faq .ui-accordion-content article > a:before {
           font-family: 'opentrials';
           speak: none;
           font-style: normal;
@@ -1136,13 +1141,13 @@ body > section {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           font-size: 4em; }
-        #register article > a.twitter:before {
+        #register article > a.twitter:before, #register .faq .ui-accordion-content article > a.twitter:before {
           content: "\e900"; }
-        #register article > a.discuss:before {
+        #register article > a.discuss:before, #register .faq .ui-accordion-content article > a.discuss:before {
           content: "\e902"; }
-        #register article > a.subscribe {
+        #register article > a.subscribe, #register .faq .ui-accordion-content article > a.subscribe {
           border: none; }
-          #register article > a.subscribe:before {
+          #register article > a.subscribe:before, #register .faq .ui-accordion-content article > a.subscribe:before {
             content: "\e901"; }
         #register article > a h3 {
           margin-top: -4px; } }
@@ -1185,7 +1190,7 @@ body > section {
     @media (min-width: 53.75em) {
       #contribute section:first-of-type {
         padding-top: 3em; } }
-  #contribute section > a {
+  #contribute section > a, #contribute .faq .ui-accordion-content section > a {
     display: inline-block;
     height: 40px;
     line-height: 42px;
@@ -1197,7 +1202,7 @@ body > section {
     border: solid 5px #0494bd;
     background-color: #fff;
     box-sizing: content-box; }
-    #contribute section > a:hover {
+    #contribute section > a:hover, #contribute .faq .ui-accordion-content section > a:hover {
       background-color: #0494bd;
       color: #fff; }
   #contribute section ul.long li {
@@ -1210,7 +1215,7 @@ body > section {
 ul.inline li {
   display: inline-block;
   margin-bottom: 5px; }
-  ul.inline li a {
+  ul.inline li a, ul.inline li .faq .ui-accordion-content a, .faq .ui-accordion-content ul.inline li a {
     background-color: #0494bd;
     color: #fff;
     padding: 0.375em 0.75em;
@@ -1316,7 +1321,7 @@ ul.long {
         opacity: 0.9; }
         .site-footer section:last-of-type a:hover {
           opacity: 1; }
-  .site-footer a {
+  .site-footer a, .site-footer .faq .ui-accordion-content a, .faq .ui-accordion-content .site-footer a {
     color: inherit; }
   .site-footer .cc {
     display: inline-block;
@@ -1422,11 +1427,12 @@ ul.long {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  a,
-  a:visited {
+  a, .faq .ui-accordion-content a,
+  a:visited,
+  .faq .ui-accordion-content a:visited {
     text-decoration: underline; }
 
-  a[href]:after {
+  a[href]:after, .faq .ui-accordion-content a[href]:after {
     content: " (" attr(href) ")"; }
 
   abbr[title]:after {
@@ -1436,8 +1442,9 @@ ul.long {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="#"]:after, .faq .ui-accordion-content a[href^="#"]:after,
+  a[href^="javascript:"]:after,
+  .faq .ui-accordion-content a[href^="javascript:"]:after {
     content: ""; }
 
   pre,
@@ -1492,14 +1499,14 @@ ul.long {
         top: 0; }
       .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul a {
+      .main-navigation ul ul a, .main-navigation ul ul .faq .ui-accordion-content a, .faq .ui-accordion-content .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
     display: inline-block; }
-  .main-navigation a {
+  .main-navigation a, .main-navigation .faq .ui-accordion-content a, .faq .ui-accordion-content .main-navigation a {
     display: block;
     text-decoration: none;
     color: #fff;
@@ -1507,15 +1514,19 @@ ul.long {
     padding: 6px 16px;
     border-radius: 22px;
     margin: 2px; }
-  .main-navigation .current_page_item > a,
+  .main-navigation .current_page_item > a, .main-navigation .faq .ui-accordion-content .current_page_item > a,
   .main-navigation .current-menu-item > a,
-  .main-navigation .current_page_ancestor > a {
+  .main-navigation .faq .ui-accordion-content .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .faq .ui-accordion-content .current_page_ancestor > a {
     margin: 0;
     border: solid 2px #fff; }
     @media (min-width: 53.75em) {
-      .main-navigation .current_page_item > a,
+      .main-navigation .current_page_item > a, .main-navigation .faq .ui-accordion-content .current_page_item > a,
       .main-navigation .current-menu-item > a,
-      .main-navigation .current_page_ancestor > a {
+      .main-navigation .faq .ui-accordion-content .current-menu-item > a,
+      .main-navigation .current_page_ancestor > a,
+      .main-navigation .faq .ui-accordion-content .current_page_ancestor > a {
         background-color: rgba(4, 148, 189, 0.7); } }
 
 /* Small menu. */
@@ -1729,7 +1740,7 @@ ul.long {
   border-color: rgba(153, 153, 153, 0.2);
   margin-bottom: 1.5em;
   padding-bottom: 3em; }
-  .page-template-page-contribute article > section > a {
+  .page-template-page-contribute article > section > a, .page-template-page-contribute .faq .ui-accordion-content article > section > a, .faq .ui-accordion-content .page-template-page-contribute article > section > a {
     display: inline-block;
     height: 40px;
     line-height: 42px;
