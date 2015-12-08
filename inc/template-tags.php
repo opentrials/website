@@ -77,13 +77,13 @@ function open_trials_posted_on() {
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date( 'M j, Y' ) ),
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'open-trials' ),
+		_x( '<span class="visuallyhidden">Posted on </span>%s', 'post date', 'open-trials' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 

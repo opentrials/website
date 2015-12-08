@@ -41,20 +41,23 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
+				<div class="entry-meta">
+					<div>
+						<?php open_trials_posted_on(); ?>
+					</div>
+				</div>
+				<div class="entry-content">
+
 					<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 					<?php if ( 'post' == get_post_type() ) : ?>
-					<div class="entry-meta">
-						<?php open_trials_posted_on(); ?>
-					</div><!-- .entry-meta -->
+					<!-- .entry-meta -->
 					<?php endif; ?>
-				</header><!-- .entry-header -->
-				<div class="entry-content">
+
 					<?php the_excerpt(); ?>
 					<a href="<?php echo get_permalink(); ?>">Read More</a>
-				</div><!-- .entry-content -->
 
+				</div>
 			</article><!-- #post-## -->
 
 		<?php endwhile; ?>

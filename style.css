@@ -221,7 +221,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog .site-main article .entry-content > a, body.blog .site-main article .faq .ui-accordion-content .entry-content > a,
 input,
 optgroup,
 select,
@@ -236,7 +236,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a {
+button, .js .page-template-page-home .cta, body.blog .site-main article .entry-content > a, body.blog .site-main article .faq .ui-accordion-content .entry-content > a {
   overflow: visible; }
 
 /**
@@ -245,7 +245,7 @@ button, .js .page-template-page-home .cta, body.blog article .entry-content > a,
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog .site-main article .entry-content > a, body.blog .site-main article .faq .ui-accordion-content .entry-content > a,
 select {
   text-transform: none; }
 
@@ -256,7 +256,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, .js .page-template-page-home .cta, body.blog article .entry-content > a, body.blog article .faq .ui-accordion-content .entry-content > a,
+button, .js .page-template-page-home .cta, body.blog .site-main article .entry-content > a, body.blog .site-main article .faq .ui-accordion-content .entry-content > a,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -268,14 +268,14 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], .js .page-template-page-home [disabled].cta, body.blog article .entry-content > a[disabled], body.blog article .faq .ui-accordion-content .entry-content > a[disabled],
+button[disabled], .js .page-template-page-home [disabled].cta, body.blog .site-main article .entry-content > a[disabled], body.blog .site-main article .faq .ui-accordion-content .entry-content > a[disabled],
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, .js .page-template-page-home .cta::-moz-focus-inner, body.blog article .entry-content > a::-moz-focus-inner, body.blog article .faq .ui-accordion-content .entry-content > a::-moz-focus-inner,
+button::-moz-focus-inner, .js .page-template-page-home .cta::-moz-focus-inner, body.blog .site-main article .entry-content > a::-moz-focus-inner, body.blog .site-main article .faq .ui-accordion-content .entry-content > a::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -386,8 +386,8 @@ html {
 input[type="button"], input[type="reset"], input[type="submit"],
 button,
 .js .page-template-page-home .cta,
-body.blog article .entry-content > a,
-body.blog article .faq .ui-accordion-content .entry-content > a {
+body.blog .site-main article .entry-content > a,
+body.blog .site-main article .faq .ui-accordion-content .entry-content > a {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -412,19 +412,19 @@ body.blog article .faq .ui-accordion-content .entry-content > a {
   input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
   .js .page-template-page-home .cta:hover,
-  body.blog article .entry-content > a:hover,
-  body.blog article .faq .ui-accordion-content .entry-content > a:hover,
+  body.blog .site-main article .entry-content > a:hover,
+  body.blog .site-main article .faq .ui-accordion-content .entry-content > a:hover,
   button:focus,
   .js .page-template-page-home .cta:focus,
-  body.blog article .entry-content > a:focus,
-  body.blog article .faq .ui-accordion-content .entry-content > a:focus {
+  body.blog .site-main article .entry-content > a:focus,
+  body.blog .site-main article .faq .ui-accordion-content .entry-content > a:focus {
     background-color: #0c7a9c;
     color: #fff; }
   input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   button:disabled,
   .js .page-template-page-home .cta:disabled,
-  body.blog article .entry-content > a:disabled,
-  body.blog article .faq .ui-accordion-content .entry-content > a:disabled {
+  body.blog .site-main article .entry-content > a:disabled,
+  body.blog .site-main article .faq .ui-accordion-content .entry-content > a:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
 
@@ -768,7 +768,7 @@ picture {
     margin: 0 5px;
     padding: 0;
     cursor: pointer; }
-    .slick-dots li button, .slick-dots li .js .page-template-page-home .cta, .js .page-template-page-home .slick-dots li .cta, .slick-dots li body.blog article .entry-content > a, body.blog article .slick-dots li .entry-content > a, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a {
+    .slick-dots li button, .slick-dots li .js .page-template-page-home .cta, .js .page-template-page-home .slick-dots li .cta, .slick-dots li body.blog .site-main article .entry-content > a, body.blog .site-main article .slick-dots li .entry-content > a, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a {
       border: 0;
       background: transparent;
       display: block;
@@ -780,11 +780,11 @@ picture {
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      .slick-dots li button:hover, .slick-dots li .js .page-template-page-home .cta:hover, .js .page-template-page-home .slick-dots li .cta:hover, .slick-dots li body.blog article .entry-content > a:hover, body.blog article .slick-dots li .entry-content > a:hover, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:hover, .slick-dots li button:focus, .slick-dots li .js .page-template-page-home .cta:focus, .js .page-template-page-home .slick-dots li .cta:focus, .slick-dots li body.blog article .entry-content > a:focus, body.blog article .slick-dots li .entry-content > a:focus, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:focus {
+      .slick-dots li button:hover, .slick-dots li .js .page-template-page-home .cta:hover, .js .page-template-page-home .slick-dots li .cta:hover, .slick-dots li body.blog .site-main article .entry-content > a:hover, body.blog .site-main article .slick-dots li .entry-content > a:hover, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a:hover, .slick-dots li button:focus, .slick-dots li .js .page-template-page-home .cta:focus, .js .page-template-page-home .slick-dots li .cta:focus, .slick-dots li body.blog .site-main article .entry-content > a:focus, body.blog .site-main article .slick-dots li .entry-content > a:focus, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a:focus {
         outline: none; }
-        .slick-dots li button:hover:before, .slick-dots li .js .page-template-page-home .cta:hover:before, .js .page-template-page-home .slick-dots li .cta:hover:before, .slick-dots li body.blog article .entry-content > a:hover:before, body.blog article .slick-dots li .entry-content > a:hover:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:hover:before, .slick-dots li button:focus:before, .slick-dots li .js .page-template-page-home .cta:focus:before, .js .page-template-page-home .slick-dots li .cta:focus:before, .slick-dots li body.blog article .entry-content > a:focus:before, body.blog article .slick-dots li .entry-content > a:focus:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:focus:before {
+        .slick-dots li button:hover:before, .slick-dots li .js .page-template-page-home .cta:hover:before, .js .page-template-page-home .slick-dots li .cta:hover:before, .slick-dots li body.blog .site-main article .entry-content > a:hover:before, body.blog .site-main article .slick-dots li .entry-content > a:hover:before, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a:hover:before, .slick-dots li button:focus:before, .slick-dots li .js .page-template-page-home .cta:focus:before, .js .page-template-page-home .slick-dots li .cta:focus:before, .slick-dots li body.blog .site-main article .entry-content > a:focus:before, body.blog .site-main article .slick-dots li .entry-content > a:focus:before, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a:focus:before {
           opacity: 1; }
-      .slick-dots li button:before, .slick-dots li .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li .cta:before, .slick-dots li body.blog article .entry-content > a:before, body.blog article .slick-dots li .entry-content > a:before, .slick-dots li body.blog article .faq .ui-accordion-content .entry-content > a:before {
+      .slick-dots li button:before, .slick-dots li .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li .cta:before, .slick-dots li body.blog .site-main article .entry-content > a:before, body.blog .site-main article .slick-dots li .entry-content > a:before, .slick-dots li body.blog .site-main article .faq .ui-accordion-content .entry-content > a:before {
         position: absolute;
         top: 0;
         left: 0;
@@ -799,7 +799,7 @@ picture {
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-    .slick-dots li.slick-active button:before, .slick-dots li.slick-active .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li.slick-active .cta:before, .slick-dots li.slick-active body.blog article .entry-content > a:before, body.blog article .slick-dots li.slick-active .entry-content > a:before, .slick-dots li.slick-active body.blog article .faq .ui-accordion-content .entry-content > a:before {
+    .slick-dots li.slick-active button:before, .slick-dots li.slick-active .js .page-template-page-home .cta:before, .js .page-template-page-home .slick-dots li.slick-active .cta:before, .slick-dots li.slick-active body.blog .site-main article .entry-content > a:before, body.blog .site-main article .slick-dots li.slick-active .entry-content > a:before, .slick-dots li.slick-active body.blog .site-main article .faq .ui-accordion-content .entry-content > a:before {
       color: white;
       opacity: 0.75; }
 
@@ -2074,18 +2074,65 @@ body.archive .comments-area {
         .page-template-page-advisory-board article figure figcaption:last-child {
           margin-right: 0; } }
 
-body.blog article .entry-header {
-  max-width: 68rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px; }
-  body.blog article .entry-header::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-time.updated {
+body.blog .site-main {
+  background-color: #fff; }
+  body.blog .site-main article {
+    max-width: 68rem;
+    margin-left: auto;
+    margin-right: auto; }
+    body.blog .site-main article::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media (min-width: 40em) {
+      body.blog .site-main article {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVQIW2NkmbL3PwMSAAAgVwJW5QGBuwAAAABJRU5ErkJggg==);
+        background-repeat: repeat-y;
+        background-position: 63px top; } }
+    body.blog .site-main article .entry-meta {
+      padding-left: 1.5em; }
+      body.blog .site-main article .entry-meta > div {
+        display: inline-block;
+        background-color: #fff;
+        color: #0494bd;
+        width: 80px;
+        height: 80px;
+        margin-top: 1.5em;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 18px;
+        line-height: 1.2;
+        border: solid 4px #0494bd; }
+        body.blog .site-main article .entry-meta > div a {
+          color: inherit; }
+      body.blog .site-main article .entry-meta .byline {
+        display: none; }
+      @media (min-width: 40em) {
+        body.blog .site-main article .entry-meta {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%; }
+          body.blog .site-main article .entry-meta:last-child {
+            margin-right: 0; } }
+    @media (min-width: 40em) {
+      body.blog .site-main article .entry-content {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        body.blog .site-main article .entry-content:last-child {
+          margin-right: 0; } }
+    body.blog .site-main article .entry-content .entry-title {
+      font-size: 2.125em;
+      margin-bottom: 0.2em; }
+      body.blog .site-main article .entry-content .entry-title a {
+        color: inherit; }
+    body.blog .site-main article .entry-content > a, body.blog .site-main article .faq .ui-accordion-content .entry-content > a {
+      margin-top: 0.75em; }
+    body.blog .site-main article:last-of-type {
+      padding-bottom: 1.5em; }
+body.blog time.updated {
   display: none; }
 
 .faq .ui-accordion-header {
