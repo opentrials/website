@@ -2147,4 +2147,54 @@ body.blog time.updated {
 .faq .ui-accordion-content {
   padding-left: 0; }
 
+@media only screen and (min-width: 700px) {
+  .venn {
+    position: relative;
+    padding: 20px;
+    font-size: 18px; }
+
+  .venn h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 100px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    text-align: center;
+    font-size: 50px;
+    color: #0494bd; }
+
+  .venn ul {
+    display: table;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed; }
+
+  .venn li {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 25% 100px;
+    color: #0494bd;
+    position: relative;
+    left: 7%; }
+
+  .venn li:nth-of-type(2) {
+    background-color: rgba(255, 255, 255, 0.8);
+    left: -7%; }
+
+  .verbose {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+
 /*# sourceMappingURL=style.css.map */
