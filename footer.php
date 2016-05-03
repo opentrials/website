@@ -12,7 +12,7 @@
         <div>
             <section>
                 <a href="https://okfn.org/" class="footer-logo" rel="external">
-                    <img alt="Open Knowledge" src="<?php echo get_template_directory_uri() ?>/img/ok-logo.png">
+                    <img alt="Open Knowledge International" src="<?php echo get_template_directory_uri() ?>/img/oki-logo.png">
                 </a>
                 <a class="footer-logo" >
                     <img src="<?php echo get_template_directory_uri() ?>/img/cos.png" alt="Center for Open Science">
