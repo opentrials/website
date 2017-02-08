@@ -667,16 +667,6 @@ ul.long {
             float: left;
             margin-right: 3px;
         }
-
-        .cc-by {
-            &:before {
-                @include icon-font();
-                content: "\e600";
-                font-size: 20px;
-                float: left;
-                margin-right: 3px;
-            }
-        }
     }
 }
 
