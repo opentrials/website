@@ -11,6 +11,7 @@
     <footer class="site-footer">
         <div>
             <section>
+
                 <a href="https://okfn.org/" class="footer-logo" rel="external">
                     <img alt="Open Knowledge" src="https://a.okfn.org/img/oki/landscape-white-468x122.png" alt="Open Knowledge International">
                 </a>
@@ -26,11 +27,14 @@
                     CC-0
                 </a>
             </section>
+            <section>
+                <a href="https://okfn.org/privacy-policy/">Privacy policy</a>
+            </section>
         </div>
     </footer>
-	
+
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>   
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 <?php wp_footer(); ?>
 
 </body>
